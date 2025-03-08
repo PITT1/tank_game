@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=3 uid="uid://d18hrxh6ro6uo"]
+
+[ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="1_ejg6r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iauem"]
+albedo_color = Color(0.0375472, 0.147126, 0.130561, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2jlr4"]
+lightmap_size_hint = Vector2i(1004, 516)
+size = Vector3(100, 1, 100)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_xf7qo"]
+points = PackedVector3Array(50.7837, 1.88095, 50.7837, -50.7837, -1.29365, -50.7837, -50.7837, 1.88095, -50.7837, 50.7837, -1.29365, -50.7837, -50.7837, -1.29365, 50.7837, -50.7837, 1.88095, 50.7837, 50.7837, 1.88095, -50.7837, 50.7837, -1.29365, 50.7837)
+
+[sub_resource type="Environment" id="Environment_k8tpq"]
+background_mode = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 3.0
+reflected_light_source = 1
+
+[node name="world" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_iauem")
+cast_shadow = 0
+mesh = SubResource("BoxMesh_2jlr4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_xf7qo")
+
+[node name="Tank1" parent="." instance=ExtResource("1_ejg6r")]
+transform = Transform3D(0.913233, 0, -0.407438, 0, 1, 0, 0.407438, 0, 0.913233, 1.8273, 7.78615, 3.14736)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.968643, -0.0492786, 0.243523, 0.0394466, 0.998204, 0.0450899, -0.245307, -0.0340699, 0.968847, 2.91473, 3.12961, 7.22616)
+fov = 91.856
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_k8tpq")
