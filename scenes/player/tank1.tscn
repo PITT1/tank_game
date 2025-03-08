@@ -462,61 +462,61 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00817871, 0.107044, 0.05307
 shape = SubResource("BoxShape3D_pmiax")
 
 [node name="L_wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.816, -0.26, 0.43)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.593565, -0.26, 0.43)
 use_as_traction = true
 wheel_radius = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_wheel_1"]
-transform = Transform3D(-8.74228e-09, -0.077, 0, 0.2, -3.36578e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="L_wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.815655, -0.259948, -0.0860563)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.594, -0.26, -0.086)
 use_as_traction = true
 wheel_radius = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_wheel_2"]
-transform = Transform3D(-8.74228e-09, -0.077, 0, 0.2, -3.36578e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="L_wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.816, -0.26, -0.56)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.594, -0.26, -0.56)
 use_as_traction = true
 wheel_radius = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_wheel_3"]
-transform = Transform3D(-8.74228e-09, -0.077, 0, 0.2, -3.36578e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="R_wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.816, -0.26, -0.56)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.594, -0.26, -0.56)
 use_as_traction = true
 wheel_radius = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_wheel_3"]
-transform = Transform3D(-8.74228e-09, -0.077, 0, 0.2, -3.36578e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="R_wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.816, -0.26, -0.086)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.594, -0.26, -0.086)
 use_as_traction = true
 wheel_radius = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_wheel_2"]
-transform = Transform3D(-8.74228e-09, -0.077, 0, 0.2, -3.36578e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="R_wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.816, -0.26, 0.43)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.594, -0.26, 0.43)
 use_as_traction = true
 wheel_radius = 0.15
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_wheel_1"]
-transform = Transform3D(-8.74228e-09, -0.077, 0, 0.2, -3.36578e-09, 0, 0, 0, 0.2, 0, 0, 0)
+transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")

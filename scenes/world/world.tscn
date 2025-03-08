@@ -34,8 +34,8 @@ shape = SubResource("ConvexPolygonShape3D_xf7qo")
 transform = Transform3D(0.913233, 0, -0.407438, 0, 1, 0, 0.407438, 0, 0.913233, 1.8273, 7.78615, 3.14736)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.968643, -0.0492786, 0.243523, 0.0394466, 0.998204, 0.0450899, -0.245307, -0.0340699, 0.968847, 2.91473, 3.12961, 7.22616)
-fov = 91.856
+transform = Transform3D(0.968643, -0.0492785, 0.243522, -0.0781118, 0.870037, 0.486759, -0.23586, -0.490517, 0.838906, 3.09077, 11.219, 12.0013)
+fov = 53.0267
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k8tpq")
