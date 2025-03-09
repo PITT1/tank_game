@@ -13,7 +13,7 @@ material = SubResource("StandardMaterial3D_gwmlx")
 
 [node name="RigidBody3D" type="RigidBody3D"]
 collision_layer = 4
-collision_mask = 7
+collision_mask = 15
 mass = 40.0
 physics_material_override = SubResource("PhysicsMaterial_xinuk")
 

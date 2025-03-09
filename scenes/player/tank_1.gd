@@ -3,11 +3,13 @@ extends VehicleBody3D
 @export var ENGINE_POWER = 100
 @export var STEER_POWER = 500
 @export var BRAKE_FORCE = 100
+@export var projectile_velocity = 1000
 
 @export var projectile: PackedScene
 
 @onready var R_wheels = [$R_wheel_3, $R_wheel_2, $R_wheel_1]
 @onready var L_wheels = [$L_wheel_3, $L_wheel_2, $L_wheel_1]
+@onready var ray_cast_3d: RayCast3D = $RayCast3D
 
 var on_brake: bool = false
 
@@ -26,7 +28,9 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("Fire"):
 		var instantia_projectile = projectile.instantiate()
 		instantia_projectile.position = global_position + Vector3(0, 1, 0)
+		instantia_projectile.set_linear_velocity(transform.basis.z * 20)
 		add_sibling(instantia_projectile)
+		print()
 	
 
 func movement():

@@ -419,7 +419,7 @@ transition = 0
 ease = 2
 
 [node name="Tank1" type="VehicleBody3D"]
-collision_mask = 3
+collision_mask = 7
 mass = 100.0
 script = ExtResource("1_15ygh")
 ENGINE_POWER = 400
@@ -542,7 +542,7 @@ material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999788, -0.00737893, 0.0192447, -0.00321356, 0.866491, 0.499183, -0.0203588, -0.499139, 0.866283, 0, 5, 5)
+transform = Transform3D(0.999788, -0.00737892, 0.0192447, -0.00677718, 0.764103, 0.645059, -0.0194648, -0.645053, 0.76389, 0, 5, 5)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -550,7 +550,7 @@ process_physics_priority = 300
 script = ExtResource("2_wtqmq")
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
-transform = Transform3D(0.999788, -0.00737891, 0.0192448, -0.00321356, 0.86649, 0.499183, -0.0203588, -0.499139, 0.866283, 0, 5, 5)
+transform = Transform3D(0.999788, -0.00737891, 0.0192448, -0.00677718, 0.764102, 0.64506, -0.0194648, -0.645052, 0.76389, 0, 5, 5)
 top_level = true
 script = ExtResource("3_nj6ni")
 follow_mode = 2
@@ -559,3 +559,7 @@ tween_resource = SubResource("Resource_w7nu7")
 follow_offset = Vector3(0, 5, 5)
 follow_damping = true
 follow_damping_value = Vector3(0.2, 0.2, 0.2)
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.0824848, 3.32032, 0, -2.81063, -0.0974429, 0, 0.580079, 0.0122358)
+collide_with_bodies = false
