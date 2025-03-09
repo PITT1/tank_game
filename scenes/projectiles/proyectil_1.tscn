@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bpnwpkwimfk22"]
+[gd_scene load_steps=5 format=3 uid="uid://bpnwpkwimfk22"]
+
+[ext_resource type="Script" path="res://scenes/projectiles/proyectil_1.gd" id="1_5t8yl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1rnkh"]
 albedo_color = Color(0, 0, 0, 1)
@@ -10,12 +12,23 @@ albedo_color = Color(0, 0, 0, 1)
 [node name="Proyectil1" type="RigidBody3D"]
 collision_layer = 8
 collision_mask = 15
+mass = 100.0
+gravity_scale = 0.1
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_5t8yl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_1rnkh")
 mesh = SubResource("SphereMesh_d5drw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
 shape = SubResource("SphereShape3D_i3dp1")
+
+[node name="destruction_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="destruction_timer" to="." method="_on_destruction_timer_timeout"]

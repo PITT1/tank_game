@@ -1,13 +1,21 @@
-[gd_scene load_steps=5 format=3 uid="uid://scrd3bw2vue7"]
+[gd_scene load_steps=6 format=3 uid="uid://scrd3bw2vue7"]
+
+[ext_resource type="Texture2D" uid="uid://blsxwkeqs5xyv" path="res://assets/textures/box1_texture.jpg" id="1_seht0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xinuk"]
 bounce = 0.31
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwmlx"]
-albedo_color = Color(0.561712, 1.34766e-06, 4.33177e-07, 1)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_28l3j"]
+render_priority = 1
+albedo_color = Color(0.466181, 0.466181, 0.466181, 1)
+albedo_texture = ExtResource("1_seht0")
+uv1_scale = Vector3(3, 3, 3)
+uv2_scale = Vector3(3, 3, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tagud"]
-material = SubResource("StandardMaterial3D_gwmlx")
+material = SubResource("StandardMaterial3D_28l3j")
+add_uv2 = true
+uv2_padding = 1.0
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_2btkc"]
 

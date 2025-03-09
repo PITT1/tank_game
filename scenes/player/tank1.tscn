@@ -559,7 +559,3 @@ tween_resource = SubResource("Resource_w7nu7")
 follow_offset = Vector3(0, 5, 5)
 follow_damping = true
 follow_damping_value = Vector3(0.2, 0.2, 0.2)
-
-[node name="RayCast3D" type="RayCast3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.0824848, 3.32032, 0, -2.81063, -0.0974429, 0, 0.580079, 0.0122358)
-collide_with_bodies = false

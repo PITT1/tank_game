@@ -27,10 +27,9 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("Fire"):
 		var instantia_projectile = projectile.instantiate()
-		instantia_projectile.position = global_position + Vector3(0, 1, 0)
+		instantia_projectile.position = global_position + transform.basis.z + Vector3(0, 0.5, 0)
 		instantia_projectile.set_linear_velocity(transform.basis.z * 20)
 		add_sibling(instantia_projectile)
-		print()
 	
 
 func movement():
