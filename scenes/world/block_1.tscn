@@ -1,4 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://scrd3bw2vue7"]
+[gd_scene load_steps=5 format=3 uid="uid://scrd3bw2vue7"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xinuk"]
+bounce = 0.31
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gwmlx"]
 albedo_color = Color(0.561712, 1.34766e-06, 4.33177e-07, 1)
@@ -11,6 +14,8 @@ material = SubResource("StandardMaterial3D_gwmlx")
 [node name="RigidBody3D" type="RigidBody3D"]
 collision_layer = 4
 collision_mask = 7
+mass = 40.0
+physics_material_override = SubResource("PhysicsMaterial_xinuk")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_tagud")

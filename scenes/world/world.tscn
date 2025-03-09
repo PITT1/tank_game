@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=8 format=3 uid="uid://d18hrxh6ro6uo"]
 
-[ext_resource type="Texture2D" uid="uid://ynb5j3yvus25" path="res://assets/textures/terrain_texture_1.jpg" id="1_64jug"]
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="1_ejg6r"]
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
+[ext_resource type="Texture2D" uid="uid://dmq1mpb0rkoej" path="res://assets/textures/rocky_terrain.webp" id="3_povdc"]
 
 [sub_resource type="Environment" id="Environment_k8tpq"]
 background_mode = 3
@@ -11,24 +11,15 @@ ambient_light_source = 3
 ambient_light_color = Color(1, 1, 1, 1)
 ambient_light_energy = 2.0
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ob2bo"]
-albedo_texture = ExtResource("1_64jug")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f7eu"]
+albedo_texture = ExtResource("3_povdc")
+uv1_scale = Vector3(100, 100, 100)
+uv2_scale = Vector3(5, 5, 5)
+uv2_offset = Vector3(5, 5, 5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pjfk1"]
-render_priority = 4
-albedo_color = Color(0.2, 0.341176, 0.47451, 1)
-albedo_texture = ExtResource("1_64jug")
-uv2_scale = Vector3(2, 2, 2)
+[sub_resource type="BoxMesh" id="BoxMesh_x54ua"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_wglnu"]
-lightmap_size_hint = Vector2i(512, 279)
-material = SubResource("StandardMaterial3D_pjfk1")
-add_uv2 = true
-uv2_padding = 6.39
-size = Vector3(50, 1, 50)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_rt8v1"]
-size = Vector3(7.44881, 5.14259, 49.8771)
+[sub_resource type="BoxShape3D" id="BoxShape3D_tt3rw"]
 
 [node name="world" type="Node3D"]
 
@@ -44,19 +35,6 @@ light_energy = 1.649
 light_indirect_energy = 2.297
 light_volumetric_fog_energy = 4.243
 light_angular_distance = 31.62
-
-[node name="platform" type="MeshInstance3D" parent="."]
-transform = Transform3D(6.17836, 0, 0, 0, 1, 0, 0, 0, 5.34669, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_ob2bo")
-mesh = SubResource("BoxMesh_wglnu")
-
-[node name="platform_1" type="StaticBody3D" parent="platform"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-collision_layer = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="platform/platform_1"]
-transform = Transform3D(6.71059, 0, 0, 0, 1, 0, 0, 0, 1, 0.106747, -2.1215, -0.0158386)
-shape = SubResource("BoxShape3D_rt8v1")
 
 [node name="bloques" type="Node3D" parent="."]
 
@@ -77,3 +55,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04186, 1.06319)
 
 [node name="RigidBody3D6" parent="bloques" instance=ExtResource("3_onuaq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02309, 2.24375)
+
+[node name="RigidBody3D7" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.09561, 2.17153)
+
+[node name="RigidBody3D8" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.17455, 1.0252)
+
+[node name="RigidBody3D9" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.16502, 2.17153)
+
+[node name="RigidBody3D10" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 3.84586, 1.34536, -3.31712)
+
+[node name="RigidBody3D11" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 3.84586, 2.57319, -3.31712)
+
+[node name="RigidBody3D12" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 3.84586, 3.79385, -3.31712)
+
+[node name="RigidBody3D13" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 2.77282, 1.3279, -3.14496)
+
+[node name="RigidBody3D14" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 2.7961, 2.51303, -3.1487)
+
+[node name="RigidBody3D15" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 1.63045, 1.49426, -2.96168)
+
+[node name="RigidBody3D16" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 1.70175, 2.56678, -2.97312)
+
+[node name="RigidBody3D17" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 2.83361, 3.64572, -3.15471)
+
+[node name="RigidBody3D18" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(0.158417, 0, -0.987372, 0, 1, 0, 0.987372, 0, 0.158417, 1.70175, 3.63619, -2.97312)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(300, 0, 0, 0, 0.634, 0, 0, 0, 300, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_1f7eu")
+mesh = SubResource("BoxMesh_x54ua")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+collision_layer = 2
+collision_mask = 7
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502138, 0)
+shape = SubResource("BoxShape3D_tt3rw")
