@@ -1,7 +1,6 @@
-[gd_scene load_steps=33 format=4 uid="uid://8xws7jnxlp2q"]
+[gd_scene load_steps=32 format=4 uid="uid://8xws7jnxlp2q"]
 
 [ext_resource type="Script" path="res://scenes/player/tank_1.gd" id="1_15ygh"]
-[ext_resource type="PackedScene" uid="uid://bpnwpkwimfk22" path="res://scenes/projectiles/proyectil_1.tscn" id="2_c3yvx"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_wtqmq"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_nj6ni"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_sfnf2"]
@@ -424,7 +423,6 @@ mass = 100.0
 script = ExtResource("1_15ygh")
 ENGINE_POWER = 400
 STEER_POWER = 600
-projectile = ExtResource("2_c3yvx")
 
 [node name="tank_1_green" type="Node3D" parent="."]
 

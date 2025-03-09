@@ -4,6 +4,8 @@ extends VehicleBody3D
 @export var STEER_POWER = 500
 @export var BRAKE_FORCE = 100
 
+@export var projectile: PackedScene
+
 @onready var R_wheels = [$R_wheel_3, $R_wheel_2, $R_wheel_1]
 @onready var L_wheels = [$L_wheel_3, $L_wheel_2, $L_wheel_1]
 
@@ -19,6 +21,15 @@ func _process(delta: float) -> void:
 	pass
 	
 func _physics_process(delta: float) -> void:
+	movement()
+	
+	if Input.is_action_just_pressed("Fire"):
+		var instantia_projectile = projectile.instantiate()
+		instantia_projectile.position = global_position + Vector3(0, 1, 0)
+		add_sibling(instantia_projectile)
+	
+
+func movement():
 	var steer = Input.get_axis("Left", "Right")
 	var move_dir = Input.get_axis("up", "Down")
 	
