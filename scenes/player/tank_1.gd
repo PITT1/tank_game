@@ -1,7 +1,7 @@
 extends VehicleBody3D
 
 @export var ENGINE_POWER = 100
-@export var STEER_POWER = 300
+@export var STEER_POWER = 500
 @export var BRAKE_FORCE = 100
 
 @onready var R_wheels = [$R_wheel_3, $R_wheel_2, $R_wheel_1]

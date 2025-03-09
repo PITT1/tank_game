@@ -1,6 +1,9 @@
-[gd_scene load_steps=27 format=4 uid="uid://8xws7jnxlp2q"]
+[gd_scene load_steps=31 format=4 uid="uid://8xws7jnxlp2q"]
 
 [ext_resource type="Script" path="res://scenes/player/tank_1.gd" id="1_15ygh"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_wtqmq"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_nj6ni"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_sfnf2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kg2a3"]
 resource_name = "Green"
@@ -406,9 +409,18 @@ albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_rd17l"]
 
+[sub_resource type="Resource" id="Resource_w7nu7"]
+script = ExtResource("4_sfnf2")
+duration = 1.0
+transition = 0
+ease = 2
+
 [node name="Tank1" type="VehicleBody3D"]
+collision_mask = 3
 mass = 100.0
 script = ExtResource("1_15ygh")
+ENGINE_POWER = 500
+STEER_POWER = 600
 
 [node name="tank_1_green" type="Node3D" parent="."]
 
@@ -520,3 +532,20 @@ wheel_radius = 0.15
 transform = Transform3D(-1.5299e-08, -0.077, 0, 0.35, -3.36578e-09, 0, 0, 0, 0.35, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.752231, 0.6589, 0, -0.6589, 0.752231, -5, 10.6589, 5.75223)
+
+[node name="PhantomCameraHost" type="Node" parent="Camera3D"]
+process_priority = 300
+process_physics_priority = 300
+script = ExtResource("2_wtqmq")
+
+[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
+transform = Transform3D(1, 0, 0, 0, 0.752231, 0.6589, 0, -0.6589, 0.752231, -5, 10.6589, 5.75223)
+script = ExtResource("3_nj6ni")
+follow_mode = 6
+follow_target = NodePath("..")
+tween_resource = SubResource("Resource_w7nu7")
+follow_offset = Vector3(-5, 10, 5)
+follow_damping = true
