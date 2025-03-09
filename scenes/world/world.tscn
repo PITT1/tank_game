@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=9 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="Texture2D" uid="uid://ynb5j3yvus25" path="res://assets/textures/terrain_texture_1.jpg" id="1_64jug"]
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="1_ejg6r"]
+[ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 
 [sub_resource type="Environment" id="Environment_k8tpq"]
 background_mode = 3
@@ -38,21 +39,41 @@ transform = Transform3D(0.913233, 0, -0.407438, 0, 1, 0, 0.407438, 0, 0.913233, 
 environment = SubResource("Environment_k8tpq")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.06661, 31.6685, 0)
+transform = Transform3D(0.99732, -0.0361652, 0.0635934, 0.0382791, 0.998744, -0.0323411, -0.0623439, 0.0346888, 0.997452, 8.06661, 72.7526, 0)
 light_energy = 1.649
 light_indirect_energy = 2.297
 light_volumetric_fog_energy = 4.243
 light_angular_distance = 31.62
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="platform" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.17836, 0, 0, 0, 1, 0, 0, 0, 5.34669, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_ob2bo")
 mesh = SubResource("BoxMesh_wglnu")
 
-[node name="platform_1" type="StaticBody3D" parent="MeshInstance3D"]
+[node name="platform_1" type="StaticBody3D" parent="platform"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 collision_layer = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/platform_1"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="platform/platform_1"]
 transform = Transform3D(6.71059, 0, 0, 0, 1, 0, 0, 0, 1, 0.106747, -2.1215, -0.0158386)
 shape = SubResource("BoxShape3D_rt8v1")
+
+[node name="bloques" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.87419, 0)
+
+[node name="RigidBody3D2" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.10202, 0)
+
+[node name="RigidBody3D3" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.32267, 0)
+
+[node name="RigidBody3D4" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.85673, 1.08677)
+
+[node name="RigidBody3D5" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.04186, 1.06319)
+
+[node name="RigidBody3D6" parent="bloques" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.02309, 2.24375)

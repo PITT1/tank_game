@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://8xws7jnxlp2q"]
+[gd_scene load_steps=32 format=4 uid="uid://8xws7jnxlp2q"]
 
 [ext_resource type="Script" path="res://scenes/player/tank_1.gd" id="1_15ygh"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_wtqmq"]
@@ -404,6 +404,8 @@ shadow_mesh = SubResource("ArrayMesh_gyqxh")
 [sub_resource type="BoxShape3D" id="BoxShape3D_pmiax"]
 size = Vector3(1.3186, 0.482544, 1.61401)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_wid5t"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8tr35"]
 albedo_color = Color(0, 0, 0, 1)
 
@@ -419,7 +421,7 @@ ease = 2
 collision_mask = 3
 mass = 100.0
 script = ExtResource("1_15ygh")
-ENGINE_POWER = 500
+ENGINE_POWER = 400
 STEER_POWER = 600
 
 [node name="tank_1_green" type="Node3D" parent="."]
@@ -469,9 +471,13 @@ transform = Transform3D(0.0671165, 0, 0, 0, 0.19984, 0, 0, 0, 0.00831379, -1.257
 mesh = SubResource("ArrayMesh_327fl")
 skeleton = NodePath("")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="tank_body_collision" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00817871, 0.107044, 0.053079)
 shape = SubResource("BoxShape3D_pmiax")
+
+[node name="turrent_collision" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.652, 0, 0, 0, 0.495405, 0, 0, 0, 0.625, 0, 0.634174, 0)
+shape = SubResource("BoxShape3D_wid5t")
 
 [node name="L_wheel_1" type="VehicleWheel3D" parent="."]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0.593565, -0.26, 0.43)
@@ -534,7 +540,7 @@ material_override = SubResource("StandardMaterial3D_8tr35")
 mesh = SubResource("CylinderMesh_rd17l")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.752231, 0.6589, 0, -0.6589, 0.752231, -5, 10.6589, 5.75223)
+transform = Transform3D(0.999788, -0.0073789, 0.0192448, -0.0129602, 0.500954, 0.865377, -0.0160263, -0.865442, 0.500752, 0, 15, 5)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -542,10 +548,12 @@ process_physics_priority = 300
 script = ExtResource("2_wtqmq")
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
-transform = Transform3D(1, 0, 0, 0, 0.752231, 0.6589, 0, -0.6589, 0.752231, -5, 10.6589, 5.75223)
+transform = Transform3D(0.999788, -0.00737891, 0.0192448, -0.0129602, 0.500954, 0.865377, -0.0160263, -0.865442, 0.500752, 0, 15, 5)
+top_level = true
 script = ExtResource("3_nj6ni")
-follow_mode = 6
+follow_mode = 2
 follow_target = NodePath("..")
 tween_resource = SubResource("Resource_w7nu7")
-follow_offset = Vector3(-5, 10, 5)
+follow_offset = Vector3(0, 15, 5)
 follow_damping = true
+follow_damping_value = Vector3(0.2, 0.2, 0.2)
