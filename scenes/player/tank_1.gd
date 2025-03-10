@@ -25,6 +25,9 @@ func _physics_process(delta: float) -> void:
 	on_fire()
 	on_brake()
 	
+	if Input.is_action_just_pressed("Jump"):
+		apply_impulse(Vector3.UP * 200)
+	
 
 func movement():
 	var steer = Input.get_axis("Left", "Right")
