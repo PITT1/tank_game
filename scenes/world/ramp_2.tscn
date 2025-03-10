@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b3351clb8oakm"]
+
+[ext_resource type="PackedScene" uid="uid://cdmb6bc03cwxx" path="res://assets/maps/ramp_2.fbx" id="1_2vcp3"]
+
+[node name="Ramp2" type="StaticBody3D"]
+
+[node name="ramp_2" parent="." instance=ExtResource("1_2vcp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.233239, 0, 1.36365)
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
+transform = Transform3D(1.28463, 0, 0, 0, 0.72874, 0, 0, 0, 10.9088, -0.309129, 0.961506, -3.3134)
+
+[editable path="ramp_2"]

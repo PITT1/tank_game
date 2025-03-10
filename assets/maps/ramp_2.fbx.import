@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://bkr33x0qe5rik"
-path="res://.godot/imported/tank_batlefield_1.fbx-d70d9a5ad43d25d1118f42547fb33e3d.scn"
+uid="uid://cdmb6bc03cwxx"
+path="res://.godot/imported/ramp_2.fbx-093df7742839d217d72506fc7cea64ad.scn"
 
 [deps]
 
-source_file="res://assets/maps/tank_batlefield_1.fbx"
-dest_files=["res://.godot/imported/tank_batlefield_1.fbx-d70d9a5ad43d25d1118f42547fb33e3d.scn"]
+source_file="res://assets/maps/ramp_2.fbx"
+dest_files=["res://.godot/imported/ramp_2.fbx-093df7742839d217d72506fc7cea64ad.scn"]
 
 [params]
 

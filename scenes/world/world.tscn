@@ -1,15 +1,23 @@
-[gd_scene load_steps=8 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=11 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="1_ejg6r"]
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dmq1mpb0rkoej" path="res://assets/textures/rocky_terrain.webp" id="3_povdc"]
+[ext_resource type="PackedScene" uid="uid://dfhj1nkkuof30" path="res://scenes/world/ramp_1.tscn" id="4_ubotc"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kgal1"]
+sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_qx4ty"]
+sky_material = SubResource("ProceduralSkyMaterial_kgal1")
 
 [sub_resource type="Environment" id="Environment_k8tpq"]
-background_mode = 3
-sky_rotation = Vector3(-1.9984, 2.85536, 2.23402)
+background_color = Color(0.553753, 0.779293, 0.780848, 1)
+sky = SubResource("Sky_qx4ty")
 ambient_light_source = 3
-ambient_light_color = Color(1, 1, 1, 1)
-ambient_light_energy = 2.0
+ambient_light_color = Color(0.820366, 0.820366, 0.820366, 1)
+fog_light_color = Color(0.381767, 0.600452, 0.551682, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1f7eu"]
 albedo_texture = ExtResource("3_povdc")
@@ -24,7 +32,7 @@ uv2_offset = Vector3(5, 5, 5)
 [node name="world" type="Node3D"]
 
 [node name="Tank1" parent="." instance=ExtResource("1_ejg6r")]
-transform = Transform3D(0.913233, 0, -0.407438, 0, 1, 0, 0.407438, 0, 0.913233, 13.8673, 14.3844, 5.15239)
+transform = Transform3D(0.913233, 0, -0.407438, 0, 1, 0, 0.407438, 0, 0.913233, 8.86451, 1.25389, 5.15239)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k8tpq")
@@ -104,3 +112,6 @@ collision_mask = 7
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502138, 0)
 shape = SubResource("BoxShape3D_tt3rw")
+
+[node name="Ramp1" parent="." instance=ExtResource("4_ubotc")]
+transform = Transform3D(-0.859168, 0.536298, 0.0480088, 0.545918, 0.844029, -0.030505, -0.0389272, 0, -1.48741, -0.602603, 1.42725, 5.04807)
