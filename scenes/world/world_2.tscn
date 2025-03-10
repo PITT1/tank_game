@@ -52,7 +52,7 @@ shader_params/u_triplanar = null
 shader_params/u_tile_reduction = Vector4(1, 1, 1, 1)
 
 [node name="Tank1" parent="." instance=ExtResource("10_nyfg8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73802, 31.4842, 14.6256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73802, 5.55586, 14.6256)
 ENGINE_POWER = 400
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -531,7 +531,7 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_5fbm8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.999788, -0.00737892, 0.0192447, -0.00677718, 0.764103, 0.645059, -0.0194648, -0.645053, 0.76389, 0, 5, 5)
+transform = Transform3D(0.999788, -0.00737892, 0.0192447, -0.00677718, 0.764103, 0.645059, -0.0194648, -0.645053, 0.76389, 0.0192448, 2.64506, 2.76389)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -539,15 +539,15 @@ process_physics_priority = 300
 script = ExtResource("2_wtqmq")
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
-transform = Transform3D(0.999788, -0.00737891, 0.0192448, -0.00677718, 0.764102, 0.64506, -0.0194648, -0.645052, 0.76389, 0, 5, 5)
-top_level = true
+transform = Transform3D(0.999788, -0.00737891, 0.0192448, -0.00677718, 0.764102, 0.64506, -0.0194648, -0.645052, 0.76389, 0.0192448, 2.64506, 2.76389)
 script = ExtResource("3_nj6ni")
-follow_mode = 2
+follow_mode = 6
 follow_target = NodePath("..")
 tween_resource = SubResource("Resource_w7nu7")
-follow_offset = Vector3(0, 5, 5)
+follow_offset = Vector3(0, 2, 2)
 follow_damping = true
 follow_damping_value = Vector3(0.2, 0.2, 0.2)
+collision_mask = 7
 
 [editable path="L_wheel_1/wheel"]
 [editable path="L_wheel_2/wheel"]
