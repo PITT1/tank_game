@@ -1,13 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3351clb8oakm"]
+[gd_scene load_steps=3 format=3 uid="uid://b3351clb8oakm"]
 
 [ext_resource type="PackedScene" uid="uid://cdmb6bc03cwxx" path="res://assets/maps/ramp_2.fbx" id="1_2vcp3"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1q0d"]
+albedo_color = Color(0.127665, 0.579343, 0.736438, 1)
+
 [node name="Ramp2" type="StaticBody3D"]
+collision_layer = 2
+collision_mask = 13
 
 [node name="ramp_2" parent="." instance=ExtResource("1_2vcp3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.233239, 0, 1.36365)
 
+[node name="Cubo" parent="ramp_2" index="0"]
+material_override = SubResource("StandardMaterial3D_y1q0d")
+
 [node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="."]
-transform = Transform3D(1.28463, 0, 0, 0, 0.72874, 0, 0, 0, 10.9088, -0.309129, 0.961506, -3.3134)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.145235, 2.43182, -3.89772)
+depth = 2.75
+polygon = PackedVector2Array(6.25516, -2.51829, 2.21837, -0.518577, 2.22187, -2.50402)
+margin = 1.0
 
 [editable path="ramp_2"]

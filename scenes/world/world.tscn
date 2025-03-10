@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=12 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="1_ejg6r"]
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dmq1mpb0rkoej" path="res://assets/textures/rocky_terrain.webp" id="3_povdc"]
 [ext_resource type="PackedScene" uid="uid://dfhj1nkkuof30" path="res://scenes/world/ramp_1.tscn" id="4_ubotc"]
+[ext_resource type="PackedScene" uid="uid://b3351clb8oakm" path="res://scenes/world/ramp_2.tscn" id="5_x0hx4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kgal1"]
 sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
@@ -113,5 +114,13 @@ collision_mask = 7
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502138, 0)
 shape = SubResource("BoxShape3D_tt3rw")
 
-[node name="Ramp1" parent="." instance=ExtResource("4_ubotc")]
-transform = Transform3D(-0.859168, 0.536298, 0.0480088, 0.545918, 0.844029, -0.030505, -0.0389272, 0, -1.48741, -0.602603, 1.42725, 5.04807)
+[node name="ramps" type="Node3D" parent="."]
+
+[node name="Ramp1" parent="ramps" instance=ExtResource("4_ubotc")]
+transform = Transform3D(-0.843412, 0.536298, 0.0322532, 0.535906, 0.844029, -0.0204938, -0.0382134, 5.58794e-09, -0.99927, -0.602603, 1.42725, 5.04807)
+
+[node name="Ramp2" parent="ramps" instance=ExtResource("5_x0hx4")]
+transform = Transform3D(-0.21025, 0, 0.977648, 0, 1, 0, -0.977648, 0, -0.21025, -0.24566, 0, 10.6999)
+
+[node name="Ramp3" parent="ramps" instance=ExtResource("5_x0hx4")]
+transform = Transform3D(0.47252, 0.432641, -1.89461, -0.104695, 1.95264, 0.419782, 1.94056, 0, 0.483979, -14.7308, -0.610113, 13.1614)
