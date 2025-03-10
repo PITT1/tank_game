@@ -13,6 +13,7 @@ uv1_scale = Vector3(3, 3, 3)
 uv2_scale = Vector3(3, 3, 3)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tagud"]
+lightmap_size_hint = Vector2i(12, 18)
 material = SubResource("StandardMaterial3D_28l3j")
 add_uv2 = true
 uv2_padding = 1.0
