@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://cog4yocmts00x"]
+
+[ext_resource type="PackedScene" uid="uid://y5fp4vfs5gl5" path="res://assets/player/new_tank.fbx" id="1_dnb3r"]
+
+[node name="NewTank" type="VehicleBody3D"]
+collision_mask = 15
+mass = 100.0
+
+[node name="new_tank" parent="." instance=ExtResource("1_dnb3r")]
+
+[node name="L_1" parent="new_tank" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.949513, 0.514126, 0.8135)
+
+[node name="L_1" parent="new_tank/L_1" index="0"]
+transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 0, 0, 0)
+
+[node name="L_2" parent="new_tank" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.949513, 0.51011, 0.138507)
+
+[node name="L_2" parent="new_tank/L_2" index="0"]
+transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 0, 0, 0)
+
+[node name="L_3" parent="new_tank" index="2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.949513, 0.502078, -0.524282)
+
+[node name="L_3" parent="new_tank/L_3" index="0"]
+transform = Transform3D(-1.31134e-06, 0, 30, 0, 30, 0, -30, 0, -1.31134e-06, 0, 0, 0)
+
+[node name="R_1" parent="new_tank" index="3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.946061, 0.502078, 0.833528)
+
+[node name="R_1" parent="new_tank/R_1" index="0"]
+transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, 0, 0, 0)
+
+[node name="R_2" parent="new_tank" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.946061, 0.51011, 0.170739)
+
+[node name="R_2" parent="new_tank/R_2" index="0"]
+transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, 0, 0, 0)
+
+[node name="R_3" parent="new_tank" index="5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.946061, 0.514126, -0.504253)
+
+[node name="R_3" parent="new_tank/R_3" index="0"]
+transform = Transform3D(-1.31134e-06, 0, -30, 0, 30, 0, 30, 0, -1.31134e-06, 0, 0, 0)
+
+[editable path="new_tank"]

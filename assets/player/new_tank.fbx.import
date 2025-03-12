@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://dmy48tpfdo6xa"
-path="res://.godot/imported/tank_1_green.fbx-b945820b8b3a691e23db6841fba87810.scn"
+uid="uid://y5fp4vfs5gl5"
+path="res://.godot/imported/new_tank.fbx-b194616346f21da6ba6bf4da21cfde06.scn"
 
 [deps]
 
-source_file="res://assets/player/tank_1_green.fbx"
-dest_files=["res://.godot/imported/tank_1_green.fbx-b945820b8b3a691e23db6841fba87810.scn"]
+source_file="res://assets/player/new_tank.fbx"
+dest_files=["res://.godot/imported/new_tank.fbx-b194616346f21da6ba6bf4da21cfde06.scn"]
 
 [params]
 
@@ -33,14 +33,19 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Base_018/Tracks_017": {
-"generate/physics": true,
-"physics/body_type": 1,
-"physics/shape_type": 2
+"PATH:tank": {
+"decomposition/advanced": true,
+"decomposition/max_concavity": 0.964,
+"decomposition/max_num_vertices_per_convex_hull": 12,
+"decomposition/symmetry_planes_clipping_bias": 0.086,
+"physics/mask": 15,
+"physics/shape_type": 2,
+"primitive/size": Vector3(10, 10, 10)
 },
-"PATH:Base_018/Wheels_032": {
-"generate/physics": true,
-"physics/body_type": 1
+"PATH:turret": {
+"physics/body_type": 1,
+"physics/mask": 15,
+"physics/shape_type": 2
 }
 }
 }
