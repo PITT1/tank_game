@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=12 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="1_ejg6r"]
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dbxsiyaaf1ro2" path="res://assets/textures/Grass004_1K-JPG_Color.jpg" id="3_qu0tt"]
 [ext_resource type="PackedScene" uid="uid://dfhj1nkkuof30" path="res://scenes/world/ramp_1.tscn" id="4_ubotc"]
 [ext_resource type="PackedScene" uid="uid://b3351clb8oakm" path="res://scenes/world/ramp_2.tscn" id="5_x0hx4"]
-[ext_resource type="PackedScene" uid="uid://cog4yocmts00x" path="res://scenes/player/new_tank.tscn" id="6_0873d"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kgal1"]
 sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
@@ -128,6 +127,3 @@ transform = Transform3D(0.47252, 0.432641, -1.89461, -0.104695, 1.95264, 0.41978
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.2808, 0)
 light_energy = 7.968
 light_angular_distance = 12.73
-
-[node name="NewTank" parent="." instance=ExtResource("6_0873d")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.0072, 4.56667, 9.36551)
