@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dbxsiyaaf1ro2" path="res://assets/textures/Grass004_1K-JPG_Color.jpg" id="3_qu0tt"]
 [ext_resource type="PackedScene" uid="uid://dfhj1nkkuof30" path="res://scenes/world/ramp_1.tscn" id="4_ubotc"]
-[ext_resource type="PackedScene" uid="uid://cog4yocmts00x" path="res://scenes/player/new_tank.tscn" id="5_lh45h"]
+[ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="5_4ah5a"]
 [ext_resource type="PackedScene" uid="uid://b3351clb8oakm" path="res://scenes/world/ramp_2.tscn" id="5_x0hx4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kgal1"]
@@ -32,13 +32,6 @@ uv1_scale = Vector3(200, 200, 200)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k8tpq")
-
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.99732, -0.0361652, 0.0635934, 0.0382791, 0.998744, -0.0323411, -0.0623439, 0.0346888, 0.997452, 8.06661, 72.7526, 0)
-light_energy = 1.649
-light_indirect_energy = 2.297
-light_volumetric_fog_energy = 4.243
-light_angular_distance = 31.62
 
 [node name="bloques" type="Node3D" parent="."]
 
@@ -125,5 +118,5 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.2808, 0)
 light_energy = 7.968
 light_angular_distance = 12.73
 
-[node name="NewTank" parent="." instance=ExtResource("5_lh45h")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.28426, 20.532, 7.33465)
+[node name="Tank1" parent="." instance=ExtResource("5_4ah5a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57889, 1.66275, 3.23487)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://8xws7jnxlp2q"]
+[gd_scene load_steps=38 format=4 uid="uid://8xws7jnxlp2q"]
 
 [ext_resource type="Script" path="res://scenes/player/tank_1.gd" id="1_15ygh"]
 [ext_resource type="PackedScene" uid="uid://bpnwpkwimfk22" path="res://scenes/projectiles/proyectil_1.tscn" id="2_c3yvx"]
@@ -394,14 +394,23 @@ albedo_color = Color(0, 0, 0, 1)
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5fbm8"]
 albedo_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Resource" id="Resource_w7nu7"]
+[sub_resource type="Resource" id="Resource_v2jvk"]
 script = ExtResource("4_sfnf2")
 duration = 1.0
 transition = 0
 ease = 2
 
+[sub_resource type="Curve3D" id="Curve3D_06al2"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -0.0016917, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -0.5, 0, 0, 0, 0, 0, 0, 0, -0.0797266, -0.680945, 0, 0, 0, 0, 0, 0, 0, -0.273567, -0.769269, 0, 0, 0, 0, 0, 0, 0, -0.458761, -0.689493, 0, 0, 0, 0, 0, 0, 0, -0.545636, -0.504298, 0, 0, 0, 0, 0, 0, 0, -0.542786, 0, 0, 0, 0, 0, 0, 0, 0, -0.545635, 0.507148, 0, 0, 0, 0, 0, 0, 0, -0.460161, 0.712286, 0, 0, 0, 0, 0, 0, 0, -0.278656, 0.774967, 0, 0, 0, 0, 0, 0, 0, -0.0763669, 0.689493, 0, 0, 0, 0, 0, 0, 0, -0.00798745, 0.509997, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 13
+
+[sub_resource type="BoxMesh" id="BoxMesh_icq3r"]
+
 [node name="Tank1" type="VehicleBody3D"]
-collision_mask = 7
+collision_mask = 15
 mass = 100.0
 script = ExtResource("1_15ygh")
 ENGINE_POWER = 300
@@ -409,6 +418,7 @@ STEER_POWER = 600
 projectile = ExtResource("2_c3yvx")
 
 [node name="tank_1_green" type="Node3D" parent="."]
+visible = false
 
 [node name="Base_018" type="MeshInstance3D" parent="tank_1_green"]
 transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, -0.00709823, 0.088594, 0.00362678)
@@ -531,24 +541,35 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_5fbm8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, -8.74228e-08, -5.29335e-15, -4.10883e-08, 0.469995, 0.882669, -7.71654e-08, 0.882669, -0.469995, 0, 10, -10)
+transform = Transform3D(-1, 0, 0, 0, 0.707107, 0.707107, 0, 0.707107, -0.707107, 0, 10, 5)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
 process_physics_priority = 300
 script = ExtResource("2_wtqmq")
 
-[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target")]
-transform = Transform3D(-1, -8.74226e-08, -2.44904e-15, -4.10883e-08, 0.469994, 0.882669, -7.71654e-08, 0.882667, -0.469996, 0, 10, -10)
+[node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
+transform = Transform3D(-0.999862, 0, 0, 0, 0.707107, 0.707011, 0, 0.707107, -0.707011, 0, 10, 5)
 top_level = true
 script = ExtResource("3_nj6ni")
 follow_mode = 2
 follow_target = NodePath("..")
-tween_resource = SubResource("Resource_w7nu7")
-follow_offset = Vector3(0, 10, -10)
+look_at_mode = 2
+look_at_target = NodePath("..")
+tween_resource = SubResource("Resource_v2jvk")
+follow_offset = Vector3(0, 10, 5)
 follow_damping = true
-follow_damping_value = Vector3(0.2, 0.2, 0.2)
-collision_mask = 7
+
+[node name="Path3D" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.11054, 0.0207617, -0.0712286)
+curve = SubResource("Curve3D_06al2")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(0.999994, 0, -0.00338337, 0, 1, 0, 0.00338338, 0, 0.999991, -0.0016917, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Path3D/PathFollow3D"]
+transform = Transform3D(0.440413, 0, 0, 0, 0.0545014, 0, 3.49246e-10, 0, 0.233712, 0, 0, 0)
+mesh = SubResource("BoxMesh_icq3r")
 
 [editable path="L_wheel_1/wheel"]
 [editable path="L_wheel_2/wheel"]
