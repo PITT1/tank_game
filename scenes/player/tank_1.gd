@@ -11,6 +11,10 @@ extends VehicleBody3D
 @onready var L_wheels = [$L_wheel_3, $L_wheel_2, $L_wheel_1]
 @onready var ray_cast_3d: RayCast3D = $RayCast3D
 
+#orugas
+
+@onready var links = $Path3D.get_children()
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -18,7 +22,9 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	var steps = 0.000001
+	for link in links:
+		link.progress += steps + delta
 	
 func _physics_process(delta: float) -> void:
 	movement()
