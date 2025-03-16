@@ -10,19 +10,17 @@ extends VehicleBody3D
 @onready var R_wheels = [$R_wheel_3, $R_wheel_2, $R_wheel_1]
 @onready var L_wheels = [$L_wheel_3, $L_wheel_2, $L_wheel_1]
 var l_links_velocity = 0.0
+var R_links_velocity = 0.0
 
 #orugas
 
 @onready var L_links = $L_oruga.get_children()
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
+@onready var R_links = $R_oruga.get_children()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	update_track_movement()
+	update_track_L_movement()
+	update_track_R_movement()
 	
 func _physics_process(delta: float) -> void:
 	movement()
@@ -62,9 +60,16 @@ func on_brake():
 		for wheel in R_wheels:
 			wheel.brake = BRAKE_FORCE
 
-func update_track_movement():
+func update_track_L_movement():
 	var forward_speed = -linear_velocity.dot(transform.basis.z)
 	var target_progress = forward_speed * 0.01
 	l_links_velocity = lerp(l_links_velocity, target_progress, 0.1)
 	for link in L_links:
 		link.progress += l_links_velocity
+
+func update_track_R_movement():
+	var forward_speed = -linear_velocity.dot(transform.basis.z)
+	var target_progress = forward_speed * 0.01
+	R_links_velocity = lerp(R_links_velocity, target_progress, 0.1)
+	for link in R_links:
+		link.progress += R_links_velocity
