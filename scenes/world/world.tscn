@@ -10,12 +10,12 @@
 sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
 sky_horizon_color = Color(1, 1, 1, 1)
 
-[sub_resource type="Sky" id="Sky_74jwx"]
+[sub_resource type="Sky" id="Sky_dldfi"]
 sky_material = SubResource("ProceduralSkyMaterial_kgal1")
 
 [sub_resource type="Environment" id="Environment_k8tpq"]
 background_color = Color(0.553753, 0.779293, 0.780848, 1)
-sky = SubResource("Sky_74jwx")
+sky = SubResource("Sky_dldfi")
 ambient_light_source = 3
 ambient_light_color = Color(0.820366, 0.820366, 0.820366, 1)
 fog_light_color = Color(0.381767, 0.600452, 0.551682, 1)

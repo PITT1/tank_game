@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://crmnda35ut4xp"]
+
+[ext_resource type="PackedScene" uid="uid://djv2d838hr7mi" path="res://assets/maps/map3.fbx" id="1_5pvkv"]
+[ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="2_rg2ne"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1kaap"]
+sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
+sky_horizon_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Sky" id="Sky_74jwx"]
+sky_material = SubResource("ProceduralSkyMaterial_1kaap")
+
+[sub_resource type="Environment" id="Environment_h4s5w"]
+background_color = Color(0.553753, 0.779293, 0.780848, 1)
+sky = SubResource("Sky_74jwx")
+ambient_light_source = 3
+ambient_light_color = Color(0.820366, 0.820366, 0.820366, 1)
+fog_light_color = Color(0.381767, 0.600452, 0.551682, 1)
+
+[node name="World3" type="Node3D"]
+
+[node name="map3" parent="." instance=ExtResource("1_5pvkv")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_h4s5w")
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.2808, 0)
+light_energy = 7.968
+light_angular_distance = 12.73
+
+[node name="Tank1" parent="." instance=ExtResource("2_rg2ne")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.1967, 0)
+
+[editable path="map3"]
