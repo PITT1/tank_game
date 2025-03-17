@@ -33,11 +33,10 @@ animation/import_rest_as_RESET=false
 import_script/path=""
 _subresources={
 "nodes": {
-"PATH:Cube": {
+"PATH:Plane": {
 "generate/physics": true,
 "physics/layer": 2,
-"physics/mask": 13,
-"physics/shape_type": 2
+"physics/mask": 13
 }
 }
 }

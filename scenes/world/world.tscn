@@ -105,7 +105,7 @@ shape = SubResource("BoxShape3D_tt3rw")
 [node name="ramps" type="Node3D" parent="."]
 
 [node name="Ramp1" parent="ramps" instance=ExtResource("4_ubotc")]
-transform = Transform3D(-0.843412, 0.536298, 0.0322532, 0.535906, 0.844029, -0.0204938, -0.0382134, 5.58794e-09, -0.99927, -0.602603, 1.42725, 5.04807)
+transform = Transform3D(-0.843412, 0.536298, 0.0322532, 0.535906, 0.844029, -0.0204938, -0.0382134, 5.58794e-09, -0.99927, -0.251782, 1.1032, 5.04807)
 
 [node name="Ramp2" parent="ramps" instance=ExtResource("5_x0hx4")]
 transform = Transform3D(-0.21025, 0, 0.977648, 0, 1, 0, -0.977648, 0, -0.21025, -0.24566, 0, 10.6999)

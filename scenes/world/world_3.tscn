@@ -31,6 +31,6 @@ light_energy = 7.968
 light_angular_distance = 12.73
 
 [node name="Tank1" parent="." instance=ExtResource("2_rg2ne")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.1967, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 27.0136, 2.81269, 0)
 
 [editable path="map3"]

@@ -471,10 +471,12 @@ transform = Transform3D(0.652, 0, 0, 0, 0.495405, 0, 0, 0, 0.625, 0, 0.634174, 0
 shape = SubResource("BoxShape3D_wid5t")
 
 [node name="L_wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, 0.593565, -0.26, 0.43)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.593565, -0.26, 0.43)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.25
+wheel_rest_length = 0.095
 suspension_travel = 0.1
+damping_compression = 0.2
 
 [node name="wheel" parent="L_wheel_1" instance=ExtResource("3_x6sq2")]
 transform = Transform3D(0.2, 0, -1.77636e-14, 0, 0.2, 0, 1.77636e-14, 0, 0.2, -0.132042, 0, -8.9407e-08)
@@ -484,10 +486,12 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_k1vxr")
 
 [node name="L_wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, 0.594, -0.26, -0.086)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.594, -0.26, -0.086)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.25
+wheel_rest_length = 0.095
 suspension_travel = 0.1
+damping_compression = 0.2
 
 [node name="wheel" parent="L_wheel_2" instance=ExtResource("3_x6sq2")]
 transform = Transform3D(0.2, 0, -1.77636e-14, 0, 0.2, 0, 1.77636e-14, 0, 0.2, -0.132042, 0, -8.9407e-08)
@@ -497,10 +501,12 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_blpge")
 
 [node name="L_wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, 0.594, -0.26, -0.56)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.594, -0.26, -0.56)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.25
+wheel_rest_length = 0.095
 suspension_travel = 0.1
+damping_compression = 0.2
 
 [node name="wheel" parent="L_wheel_3" instance=ExtResource("3_x6sq2")]
 transform = Transform3D(0.2, 0, -1.77636e-14, 0, 0.2, 0, 1.77636e-14, 0, 0.2, -0.132042, 0, -8.9407e-08)
@@ -510,10 +516,12 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_b5p2s")
 
 [node name="R_wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, -0.594, -0.26, -0.56)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.594, -0.26, -0.56)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.25
+wheel_rest_length = 0.095
 suspension_travel = 0.1
+damping_compression = 0.2
 
 [node name="wheel" parent="R_wheel_3" instance=ExtResource("3_x6sq2")]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0.157236, 0, 0)
@@ -523,10 +531,12 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_1c7ml")
 
 [node name="R_wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, -0.594, -0.26, -0.086)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.594, -0.26, -0.086)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.25
+wheel_rest_length = 0.095
 suspension_travel = 0.1
+damping_compression = 0.2
 
 [node name="wheel" parent="R_wheel_2" instance=ExtResource("3_x6sq2")]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0.157236, 0, 0)
@@ -536,10 +546,12 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_fjtkd")
 
 [node name="R_wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1.3, 0, -1.96295e-07, 0, 1.3, 0, 1.96295e-07, 0, -1.3, -0.594, -0.26, 0.43)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.594, -0.26, 0.43)
 use_as_traction = true
-wheel_radius = 0.3
+wheel_radius = 0.25
+wheel_rest_length = 0.095
 suspension_travel = 0.1
+damping_compression = 0.2
 
 [node name="wheel" parent="R_wheel_1" instance=ExtResource("3_x6sq2")]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0.157236, 0, 0)
@@ -549,7 +561,7 @@ transform = Transform3D(0, -2.98023e-06, 100, -100, 0, -2.98023e-06, 2.98023e-06
 material_override = SubResource("StandardMaterial3D_5fbm8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 0, 0, 0, 0.707107, 0.707107, 0, 0.707107, -0.707107, 0, 5, 5)
+transform = Transform3D(-1, 0, 0, 0, 0.707107, 0.707107, 0, 0.707107, -0.707107, 0, 12, 9)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -557,7 +569,7 @@ process_physics_priority = 300
 script = ExtResource("2_wtqmq")
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.999862, 0, 0, 0, 0.707107, 0.707011, 0, 0.707107, -0.707011, 0, 5, 5)
+transform = Transform3D(-0.999862, 0, 0, 0, 0.707107, 0.707011, 0, 0.707107, -0.707011, 0, 12, 9)
 top_level = true
 script = ExtResource("3_nj6ni")
 follow_mode = 2
@@ -565,11 +577,11 @@ follow_target = NodePath("..")
 look_at_mode = 2
 look_at_target = NodePath("..")
 tween_resource = SubResource("Resource_v2jvk")
-follow_offset = Vector3(0, 5, 5)
+follow_offset = Vector3(0, 12, 9)
 follow_damping = true
 
 [node name="L_oruga" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.443, -0.02, -0.071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.443, 0.07, -0.071)
 curve = SubResource("Curve3D_06al2")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="L_oruga"]
@@ -663,7 +675,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D11" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
+transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561748, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
 progress = 1.96
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_oruga/PathFollow3D11"]
@@ -672,7 +684,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D12" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
+transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561748, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
 progress = 2.26
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_oruga/PathFollow3D12"]
@@ -681,7 +693,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="R_oruga" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.461, -0.02, -0.071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.461, 0.07, -0.071)
 curve = SubResource("Curve3D_06al2")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="R_oruga"]
@@ -775,7 +787,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D11" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
+transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561748, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
 progress = 1.96
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_oruga/PathFollow3D11"]
@@ -784,7 +796,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D12" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
+transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561748, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
 progress = 2.26
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_oruga/PathFollow3D12"]

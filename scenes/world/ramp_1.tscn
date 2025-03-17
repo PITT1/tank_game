@@ -3,7 +3,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_n53wu"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_0x3it"]
-size = Vector3(5, 0.274, 2)
+size = Vector3(5, 0.9, 2)
 
 [node name="Ramp1" type="StaticBody3D"]
 collision_layer = 2
