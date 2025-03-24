@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=4 uid="uid://cog4yocmts00x"]
 
-[ext_resource type="Script" path="res://scenes/player/new_tank.gd" id="1_8jq1l"]
+[ext_resource type="Script" uid="uid://dnq0snidw28ks" path="res://scenes/player/new_tank.gd" id="1_8jq1l"]
 [ext_resource type="PackedScene" uid="uid://bprstb64nxx8u" path="res://assets/player/new_tank_2.fbx" id="1_q2wja"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7vlth"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_7ebva"]
-[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_cux8m"]
+[ext_resource type="Script" uid="uid://jk3w4inwiel3" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="2_7vlth"]
+[ext_resource type="Script" uid="uid://b1nhtg43hovew" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_3d.gd" id="3_7ebva"]
+[ext_resource type="Script" uid="uid://ddm1fgwoo0wou" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_cux8m"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_886m0"]
 size = Vector3(1, 0.662246, 1)

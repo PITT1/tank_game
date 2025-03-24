@@ -1,8 +1,8 @@
 [gd_scene load_steps=15 format=3 uid="uid://w8utbgbqsjxh"]
 
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="1_cx41y"]
-[ext_resource type="Resource" path="res://scenes/terrain_map/data.hterrain" id="2_2cpoq"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_2fjed"]
+[ext_resource type="Script" uid="uid://dfxikpsr18biy" path="res://addons/zylann.hterrain/hterrain.gd" id="1_cx41y"]
+[ext_resource type="Resource" uid="uid://r26i8krq0cw6" path="res://scenes/terrain_map/data.hterrain" id="2_2cpoq"]
+[ext_resource type="Script" uid="uid://c56tmplfhvihn" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="3_2fjed"]
 [ext_resource type="Texture2D" uid="uid://d0kdau1l4fn8l" path="res://assets/textures/texture_terrain/Ground037_1K-JPG_Color.jpg" id="4_2ioar"]
 [ext_resource type="Texture2D" uid="uid://d8tn2qp6brja" path="res://assets/textures/texture_terrain/Ground067_1K-JPG_Color.jpg" id="5_71q24"]
 [ext_resource type="Texture2D" uid="uid://bd0hwbgjl30pp" path="res://assets/textures/texture_terrain/Ground081_1K-JPG_Color.jpg" id="6_1yftj"]
