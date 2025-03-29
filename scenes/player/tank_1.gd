@@ -4,8 +4,11 @@ extends VehicleBody3D
 @export var STEER_POWER = 500
 @export var BRAKE_FORCE = 1
 @export var projectile_velocity = 1000
-
 @export var projectile: PackedScene
+
+@export_category("CAMERA")
+@export var camera_distance: float = 4
+@export var camera_height: float = 4
 
 @onready var R_wheels = [$R_wheel_3, $R_wheel_2, $R_wheel_1]
 @onready var L_wheels = [$L_wheel_3, $L_wheel_2, $L_wheel_1]
@@ -28,10 +31,16 @@ func _process(delta: float) -> void:
 	update_track_R_movement()
 	update_pcam()
 	
+	if delta:
+		pass
+	
 func _physics_process(delta: float) -> void:
 	movement()
 	on_fire()
 	on_brake()
+	
+	if delta:
+		pass
 	
 	if Input.is_action_just_pressed("Jump"):
 		apply_impulse(Vector3.UP * 200)
@@ -82,6 +91,6 @@ func update_track_R_movement():
 
 func update_pcam():
 	var forward_direction = -global_transform.basis.z.normalized()
-	target_offset = Vector2(forward_direction.x * 8, forward_direction.z * 8)
+	target_offset = Vector2(forward_direction.x * camera_distance, forward_direction.z * camera_distance)
 	current_offset = current_offset.lerp(target_offset, 0.05)
-	pCam.follow_offset = Vector3(current_offset.x, 4, current_offset.y)
+	pCam.follow_offset = Vector3(current_offset.x, camera_height, current_offset.y)

@@ -562,7 +562,7 @@ material_override = SubResource("StandardMaterial3D_5fbm8")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 physics_interpolation_mode = 1
-transform = Transform3D(-1, 0, 0, 0, 0.707107, 0.707107, 0, 0.707107, -0.707107, 2.8026e-45, 2.8026e-45, 2.8026e-45)
+transform = Transform3D(-1, 0, 0, 0, 0.707107, 0.707107, 0, 0.707107, -0.707107, 1, 1, 1)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera3D"]
 process_priority = 300
@@ -570,7 +570,7 @@ process_physics_priority = 300
 script = ExtResource("2_wtqmq")
 
 [node name="PhantomCamera3D" type="Node3D" parent="." node_paths=PackedStringArray("follow_target", "look_at_target")]
-transform = Transform3D(-0.999862, 0, 0, 0, 0.707107, 0.707011, 0, 0.707107, -0.707011, 0, 0, 0)
+transform = Transform3D(-0.999862, 0, 0, 0, 0.707107, 0.707011, 0, 0.707107, -0.707011, 1, 1, 1)
 top_level = true
 script = ExtResource("3_nj6ni")
 follow_mode = 2
@@ -578,6 +578,7 @@ follow_target = NodePath("..")
 look_at_mode = 2
 look_at_target = NodePath("..")
 tween_resource = SubResource("Resource_v2jvk")
+follow_offset = Vector3(1, 1, 1)
 follow_damping = true
 follow_damping_value = Vector3(0.2, 0.2, 0.2)
 
