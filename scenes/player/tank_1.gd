@@ -12,6 +12,9 @@ extends VehicleBody3D
 var l_links_velocity = 0.0
 var R_links_velocity = 0.0
 
+var target_offset = Vector2.ZERO
+var current_offset = Vector2.ZERO
+
 #orugas
 
 @onready var L_links = $L_oruga.get_children()
@@ -79,5 +82,6 @@ func update_track_R_movement():
 
 func update_pcam():
 	var forward_direction = -global_transform.basis.z.normalized()
-	pCam.follow_offset.x = forward_direction.x * 5
-	pCam.follow_offset.z = forward_direction.z * 5
+	target_offset = Vector2(forward_direction.x * 8, forward_direction.z * 8)
+	current_offset = current_offset.lerp(target_offset, 0.05)
+	pCam.follow_offset = Vector3(current_offset.x, 4, current_offset.y)
