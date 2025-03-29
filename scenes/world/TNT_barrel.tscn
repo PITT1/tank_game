@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8pg0kgtfn3cd"]
+
+[ext_resource type="PackedScene" uid="uid://36u3srvla54k" path="res://assets/maps/barrel.fbx" id="1_lg52k"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_lg52k"]
+height = 1.37299
+radius = 0.590332
+
+[node name="TntBarrel" type="Node3D"]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+collision_layer = 16
+collision_mask = 31
+mass = 50.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.096568, 0.866263, 0.105161)
+shape = SubResource("CylinderShape3D_lg52k")
+debug_color = Color(1, 0.0117647, 0, 0.419608)
+
+[node name="barrel" parent="RigidBody3D" instance=ExtResource("1_lg52k")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.045, 0, -0.115)

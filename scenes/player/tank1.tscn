@@ -680,7 +680,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D11" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
+transform = Transform3D(0.999999, 0.000712307, -8.74202e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
 progress = 1.96
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_oruga/PathFollow3D11"]
@@ -689,7 +689,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D12" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
+transform = Transform3D(0.999999, 0.000712307, -8.74202e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
 progress = 2.26
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="L_oruga/PathFollow3D12"]
@@ -792,7 +792,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D11" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
+transform = Transform3D(0.999999, 0.000712307, -8.74202e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.543526, 0.131698)
 progress = 1.96
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_oruga/PathFollow3D11"]
@@ -801,7 +801,7 @@ material_override = SubResource("StandardMaterial3D_pgddb")
 mesh = SubResource("BoxMesh_icq3r")
 
 [node name="PathFollow3D12" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999999, 0.000712307, -8.74201e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
+transform = Transform3D(0.999999, 0.000712307, -8.74202e-08, 0.000712295, -0.999984, 0.00561749, 3.91401e-06, -0.00561757, -0.99997, 0, -0.545626, 0.443388)
 progress = 2.26
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="R_oruga/PathFollow3D12"]

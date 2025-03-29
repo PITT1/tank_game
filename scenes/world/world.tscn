@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=12 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dbxsiyaaf1ro2" path="res://assets/textures/Grass004_1K-JPG_Color.jpg" id="3_qu0tt"]
+[ext_resource type="PackedScene" uid="uid://b3351clb8oakm" path="res://scenes/world/ramp_2.tscn" id="4_6m72w"]
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="5_4ah5a"]
+[ext_resource type="PackedScene" uid="uid://c8pg0kgtfn3cd" path="res://scenes/world/TNT_barrel.tscn" id="5_v5dby"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1fp7r"]
 sky_top_color = Color(0.25336, 0.465043, 0.661042, 1)
@@ -119,5 +121,14 @@ shape = SubResource("BoxShape3D_tt3rw")
 
 [node name="ramps" type="Node3D" parent="."]
 
+[node name="Ramp2" parent="ramps" instance=ExtResource("4_6m72w")]
+transform = Transform3D(-0.582194, 0, 0.81305, 0, 1, 0, -0.81305, 0, -0.582194, -4.25157, 0.314047, 8.43539)
+
+[node name="Ramp3" parent="ramps" instance=ExtResource("4_6m72w")]
+transform = Transform3D(0.634028, 0.509181, -0.582016, -0.144008, 0.817207, 0.558063, 0.759783, -0.270013, 0.591458, -7.69423, 1.39258, 10.8319)
+
 [node name="Tank1" parent="." instance=ExtResource("5_4ah5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57889, 1.66275, 3.23487)
+
+[node name="TntBarrel" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98419, 1.96407, 9.53376)

@@ -71,6 +71,7 @@ Jump={
 3d_physics/layer_2="platforms"
 3d_physics/layer_3="blocks"
 3d_physics/layer_4="projectiles"
+3d_physics/layer_5="TNT_barrel"
 
 [rendering]
 

@@ -76,14 +76,14 @@ func on_brake():
 			wheel.brake = BRAKE_FORCE
 
 func update_track_L_movement():
-	var rpm_wheel = (L_wheels[0].get_rpm()) * 0.05
+	var rpm_wheel = (L_wheels[0].get_rpm()) * 0.03
 	var target_progress = -rpm_wheel * 0.01
 	l_links_velocity = lerp(l_links_velocity, target_progress, 0.1)
 	for link in L_links:
 		link.progress += l_links_velocity
 
 func update_track_R_movement():
-	var rpm_wheel = (R_wheels[0].get_rpm()) * 0.05
+	var rpm_wheel = (R_wheels[0].get_rpm()) * 0.03
 	var target_progress = -rpm_wheel * 0.01
 	R_links_velocity = lerp(R_links_velocity, target_progress, 0.1)
 	for link in R_links:
