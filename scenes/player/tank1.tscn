@@ -419,6 +419,8 @@ script = ExtResource("1_15ygh")
 ENGINE_POWER = 300
 STEER_POWER = 600
 projectile = ExtResource("2_c3yvx")
+camera_distance = 2.0
+camera_height = 1.5
 
 [node name="tank_1_green" type="Node3D" parent="."]
 
@@ -581,6 +583,7 @@ tween_resource = SubResource("Resource_v2jvk")
 follow_offset = Vector3(1, 1, 1)
 follow_damping = true
 follow_damping_value = Vector3(0.2, 0.2, 0.2)
+look_at_offset = Vector3(0, 0.5, 0)
 
 [node name="L_oruga" type="Path3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.443, 0.07, -0.071)
