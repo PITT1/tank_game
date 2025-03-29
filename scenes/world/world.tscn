@@ -1,24 +1,33 @@
-[gd_scene load_steps=12 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=10 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dbxsiyaaf1ro2" path="res://assets/textures/Grass004_1K-JPG_Color.jpg" id="3_qu0tt"]
-[ext_resource type="PackedScene" uid="uid://dfhj1nkkuof30" path="res://scenes/world/ramp_1.tscn" id="4_ubotc"]
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="5_4ah5a"]
-[ext_resource type="PackedScene" uid="uid://b3351clb8oakm" path="res://scenes/world/ramp_2.tscn" id="5_x0hx4"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kgal1"]
-sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
-sky_horizon_color = Color(1, 1, 1, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1fp7r"]
+sky_top_color = Color(0.25336, 0.465043, 0.661042, 1)
+sky_curve = 0.117688
+sun_angle_max = 24.1
+sun_curve = 0.369344
+energy_multiplier = 0.5
 
-[sub_resource type="Sky" id="Sky_dldfi"]
-sky_material = SubResource("ProceduralSkyMaterial_kgal1")
+[sub_resource type="Sky" id="Sky_6m72w"]
+sky_material = SubResource("ProceduralSkyMaterial_1fp7r")
+radiance_size = 0
 
 [sub_resource type="Environment" id="Environment_k8tpq"]
+background_mode = 2
 background_color = Color(0.553753, 0.779293, 0.780848, 1)
-sky = SubResource("Sky_dldfi")
-ambient_light_source = 3
-ambient_light_color = Color(0.820366, 0.820366, 0.820366, 1)
-fog_light_color = Color(0.381767, 0.600452, 0.551682, 1)
+background_energy_multiplier = 2.75
+sky = SubResource("Sky_6m72w")
+sky_rotation = Vector3(0.0610865, 0, 0)
+reflected_light_source = 2
+glow_intensity = 2.35
+glow_bloom = 0.16
+glow_hdr_threshold = 0.7
+glow_hdr_scale = 1.2
+glow_hdr_luminance_cap = 12.35
+volumetric_fog_density = 0.0685
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdfg0"]
 albedo_texture = ExtResource("3_qu0tt")
@@ -32,6 +41,12 @@ uv1_scale = Vector3(200, 200, 200)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_k8tpq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.0684, 0)
+light_energy = 2.21
+directional_shadow_max_distance = 92.0
+sky_mode = 1
 
 [node name="bloques" type="Node3D" parent="."]
 
@@ -103,20 +118,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502138, 0)
 shape = SubResource("BoxShape3D_tt3rw")
 
 [node name="ramps" type="Node3D" parent="."]
-
-[node name="Ramp1" parent="ramps" instance=ExtResource("4_ubotc")]
-transform = Transform3D(-0.843412, 0.536298, 0.0322532, 0.535906, 0.844029, -0.0204938, -0.0382134, 5.58794e-09, -0.99927, -0.251782, 1.1032, 5.04807)
-
-[node name="Ramp2" parent="ramps" instance=ExtResource("5_x0hx4")]
-transform = Transform3D(-0.21025, 0, 0.977648, 0, 1, 0, -0.977648, 0, -0.21025, -0.24566, 0, 10.6999)
-
-[node name="Ramp3" parent="ramps" instance=ExtResource("5_x0hx4")]
-transform = Transform3D(0.47252, 0.432641, -1.89461, -0.104695, 1.95264, 0.419782, 1.94056, 0, 0.483979, -14.7308, -0.610113, 13.1614)
-
-[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 39.2808, 0)
-light_energy = 7.968
-light_angular_distance = 12.73
 
 [node name="Tank1" parent="." instance=ExtResource("5_4ah5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57889, 1.66275, 3.23487)

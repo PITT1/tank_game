@@ -17,10 +17,13 @@ var R_links_velocity = 0.0
 @onready var L_links = $L_oruga.get_children()
 @onready var R_links = $R_oruga.get_children()
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+@onready var pCam: PhantomCamera3D = $PhantomCamera3D
+
+
 func _process(delta: float) -> void:
 	update_track_L_movement()
 	update_track_R_movement()
+	update_pcam()
 	
 func _physics_process(delta: float) -> void:
 	movement()
@@ -73,3 +76,8 @@ func update_track_R_movement():
 	R_links_velocity = lerp(R_links_velocity, target_progress, 0.1)
 	for link in R_links:
 		link.progress += R_links_velocity
+
+func update_pcam():
+	var forward_direction = -global_transform.basis.z.normalized()
+	pCam.follow_offset.x = forward_direction.x * 8
+	pCam.follow_offset.z = forward_direction.z * 8

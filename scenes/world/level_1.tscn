@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba5a5s726tjqi"]
+
+[ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="2_5ebu0"]
+
+[sub_resource type="Environment" id="Environment_5ebu0"]
+background_mode = 2
+ambient_light_source = 3
+ambient_light_color = Color(1, 0.902015, 0.949407, 1)
+ambient_light_energy = 1.33
+
+[sub_resource type="BoxMesh" id="BoxMesh_pq706"]
+size = Vector3(100, 0.5, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ebu0"]
+size = Vector3(100, 0.5, 100)
+
+[node name="Level1" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5ebu0")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 32.7865, 2.54728)
+light_energy = 2.94
+light_indirect_energy = 7.949
+light_volumetric_fog_energy = 3.909
+light_angular_distance = 8.6
+light_specular = 2.616
+light_bake_mode = 1
+shadow_enabled = true
+
+[node name="Tank1" parent="." instance=ExtResource("2_5ebu0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57889, 3.04172, 5.01193)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+collision_layer = 2
+collision_mask = 15
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_pq706")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.847076, 0)
+shape = SubResource("BoxShape3D_5ebu0")
