@@ -79,5 +79,5 @@ func update_track_R_movement():
 
 func update_pcam():
 	var forward_direction = -global_transform.basis.z.normalized()
-	pCam.follow_offset.x = forward_direction.x * 8
-	pCam.follow_offset.z = forward_direction.z * 8
+	pCam.follow_offset.x = forward_direction.x * 5
+	pCam.follow_offset.z = forward_direction.z * 5
