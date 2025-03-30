@@ -1,6 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://c8pg0kgtfn3cd"]
+[gd_scene load_steps=6 format=3 uid="uid://c8pg0kgtfn3cd"]
 
+[ext_resource type="Texture2D" uid="uid://d0u6yo0dtb1vp" path="res://assets/textures/wood_Base_Color.png" id="1_3d0b5"]
 [ext_resource type="ArrayMesh" uid="uid://cr8b44lnptlpa" path="res://assets/maps/barrel.obj" id="1_lg52k"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3d0b5"]
+albedo_texture = ExtResource("1_3d0b5")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_254nl"]
+albedo_color = Color(0.558287, 0.558287, 0.558287, 1)
+metallic = 0.51
+metallic_specular = 0.58
+roughness = 0.59
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_lg52k"]
 height = 1.06149
@@ -11,12 +21,17 @@ radius = 0.466797
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 collision_layer = 16
 collision_mask = 31
-mass = 50.0
+mass = 80.0
 
 [node name="Barrel" type="MeshInstance3D" parent="RigidBody3D"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, -0.110258, 1.19209e-07, -0.188124)
 mesh = ExtResource("1_lg52k")
 skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_3d0b5")
+surface_material_override/1 = SubResource("StandardMaterial3D_254nl")
+surface_material_override/2 = SubResource("StandardMaterial3D_254nl")
+surface_material_override/3 = SubResource("StandardMaterial3D_254nl")
+surface_material_override/4 = SubResource("StandardMaterial3D_254nl")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00933156, 0.710516, -0.00601727)

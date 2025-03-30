@@ -116,7 +116,7 @@ collision_layer = 2
 collision_mask = 7
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.502138, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00588234, 0)
 shape = SubResource("BoxShape3D_tt3rw")
 
 [node name="ramps" type="Node3D" parent="."]
@@ -128,7 +128,22 @@ transform = Transform3D(-0.582194, 0, 0.81305, 0, 1, 0, -0.81305, 0, -0.582194, 
 transform = Transform3D(0.634028, 0.509181, -0.582016, -0.144008, 0.817207, 0.558063, 0.759783, -0.270013, 0.591458, -7.69423, 1.39258, 10.8319)
 
 [node name="Tank1" parent="." instance=ExtResource("5_4ah5a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57889, 1.66275, 3.23487)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.57889, 3.08412, 3.23487)
 
 [node name="TntBarrel" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98419, 1.96407, 9.53376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98419, 0.993641, 9.53376)
+
+[node name="TntBarrel2" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98218, 0.974052, 10.6199)
+
+[node name="TntBarrel3" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06876, 2.27091, 10.1043)
+
+[node name="TntBarrel4" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06876, 2.27091, 11.1094)
+
+[node name="TntBarrel5" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23839, 0.988598, 11.6816)
+
+[node name="TntBarrel6" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07024, 3.46573, 10.6441)
