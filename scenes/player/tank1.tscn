@@ -404,19 +404,25 @@ roughness = 0.77
 
 [node name="Tank1" type="VehicleBody3D"]
 collision_mask = 15
-mass = 600.0
+mass = 100.0
 script = ExtResource("1_15ygh")
-STEER_POWER = 200
+STEER_POWER = 300
+projectile_velocity = 1500
 projectile = ExtResource("2_c3yvx")
-camera_distance = 2.0
-camera_height = 1.5
+camera_distance = 2.945
+camera_height = 3.215
 
 [node name="L_wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.8, -0.146432, 0.597311)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.6, -0.146432, 0.597311)
 use_as_traction = true
 wheel_radius = 0.255
+wheel_rest_length = 0.1
+wheel_friction_slip = 1.5
 suspension_travel = 0.05
-suspension_stiffness = 60.0
+suspension_stiffness = 70.0
+suspension_max_force = 8000.0
+damping_compression = 5.0
+damping_relaxation = 5.0
 
 [node name="TankWheel" type="MeshInstance3D" parent="L_wheel_1"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
@@ -425,11 +431,16 @@ mesh = ExtResource("3_igah1")
 skeleton = NodePath("../..")
 
 [node name="L_wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.8, -0.146432, -0.086)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.6, -0.146432, -0.086)
 use_as_traction = true
 wheel_radius = 0.255
+wheel_rest_length = 0.1
+wheel_friction_slip = 1.5
 suspension_travel = 0.05
-suspension_stiffness = 60.0
+suspension_stiffness = 70.0
+suspension_max_force = 8000.0
+damping_compression = 5.0
+damping_relaxation = 5.0
 
 [node name="TankWheel" type="MeshInstance3D" parent="L_wheel_2"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
@@ -438,11 +449,16 @@ mesh = ExtResource("3_igah1")
 skeleton = NodePath("../..")
 
 [node name="L_wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.8, -0.146432, -0.811056)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0.6, -0.146432, -0.811056)
 use_as_traction = true
 wheel_radius = 0.255
+wheel_rest_length = 0.1
+wheel_friction_slip = 1.5
 suspension_travel = 0.05
-suspension_stiffness = 60.0
+suspension_stiffness = 70.0
+suspension_max_force = 8000.0
+damping_compression = 5.0
+damping_relaxation = 5.0
 
 [node name="TankWheel" type="MeshInstance3D" parent="L_wheel_3"]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
@@ -451,11 +467,16 @@ mesh = ExtResource("3_igah1")
 skeleton = NodePath("../..")
 
 [node name="R_wheel_3" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.8, -0.146432, -0.811056)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.6, -0.146, -0.811)
 use_as_traction = true
 wheel_radius = 0.255
+wheel_rest_length = 0.1
+wheel_friction_slip = 1.5
 suspension_travel = 0.05
-suspension_stiffness = 60.0
+suspension_stiffness = 70.0
+suspension_max_force = 8000.0
+damping_compression = 5.0
+damping_relaxation = 5.0
 
 [node name="TankWheel" type="MeshInstance3D" parent="R_wheel_3"]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0)
@@ -464,11 +485,16 @@ mesh = ExtResource("3_igah1")
 skeleton = NodePath("../..")
 
 [node name="R_wheel_2" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.8, -0.146432, -0.086)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.595, -0.146432, -0.086)
 use_as_traction = true
 wheel_radius = 0.255
+wheel_rest_length = 0.1
+wheel_friction_slip = 1.5
 suspension_travel = 0.05
-suspension_stiffness = 60.0
+suspension_stiffness = 70.0
+suspension_max_force = 8000.0
+damping_compression = 5.0
+damping_relaxation = 5.0
 
 [node name="TankWheel" type="MeshInstance3D" parent="R_wheel_2"]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0)
@@ -477,11 +503,16 @@ mesh = ExtResource("3_igah1")
 skeleton = NodePath("../..")
 
 [node name="R_wheel_1" type="VehicleWheel3D" parent="."]
-transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.8, -0.146432, 0.597311)
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.595, -0.146432, 0.597311)
 use_as_traction = true
 wheel_radius = 0.255
+wheel_rest_length = 0.1
+wheel_friction_slip = 1.5
 suspension_travel = 0.05
-suspension_stiffness = 60.0
+suspension_stiffness = 70.0
+suspension_max_force = 8000.0
+damping_compression = 5.0
+damping_relaxation = 5.0
 
 [node name="TankWheel" type="MeshInstance3D" parent="R_wheel_1"]
 transform = Transform3D(-0.2, 0, -1.74846e-08, 0, 0.2, 0, 1.74846e-08, 0, -0.2, 0, 0, 0)
@@ -563,11 +594,11 @@ follow_damping_value = Vector3(0.2, 0.2, 0.2)
 look_at_offset = Vector3(0, 0.5, 0)
 
 [node name="L_oruga" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.7, 0.00205176, -0.071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.002, -0.071)
 curve = SubResource("Curve3D_06al2")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.99999, 0.000287912, -8.74128e-08, 0.000287915, -0.999949, 0.00561701, 1.52998e-06, -0.00561737, -0.999886, 0, -0.544182, 0.248555)
+transform = Transform3D(0.999988, 0.000287911, -8.74127e-08, 0.000287914, -0.999947, 0.00561701, 1.52998e-06, -0.00561736, -0.999884, 0, -0.544182, 0.248555)
 progress = 2.64753
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D"]
@@ -576,7 +607,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999989, 0.000287918, -8.74194e-08, 0.000287918, -0.999982, 0.00316823, 8.24803e-07, -0.0031683, -0.999962, 0, -0.545459, 0.509085)
+transform = Transform3D(0.999987, 0.000287918, -8.74194e-08, 0.000287917, -0.999981, 0.00316823, 8.24802e-07, -0.00316829, -0.999962, 0, -0.545459, 0.509085)
 progress = 2.90861
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D2"]
@@ -585,7 +616,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D3" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999985, 0.000287901, 8.51323e-08, 0.000280381, -0.973819, -0.227301, -6.53581e-05, 0.227305, -0.9738, 0, -0.494085, 0.822339)
+transform = Transform3D(0.999984, 0.000287901, 8.51323e-08, 0.000280381, -0.973818, -0.227301, -6.53581e-05, 0.227305, -0.9738, 0, -0.494085, 0.822339)
 progress = 3.22613
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D3"]
@@ -594,7 +625,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D4" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999987, 0.000288003, -3.04999e-08, 0.000100452, -0.34889, -0.93713, -0.000269914, 0.937161, -0.348878, 0, -0.279335, 1.00472)
+transform = Transform3D(0.999985, 0.000288003, -3.04999e-08, 0.000100452, -0.34889, -0.93713, -0.000269914, 0.937161, -0.348878, 0, -0.279335, 1.00472)
 progress = 3.53548
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D4"]
@@ -621,7 +652,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D7" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999989, 0.000287811, 0, -0.000279439, 0.970906, 0.239419, 6.89088e-05, -0.239422, 0.970892, 0, 0.0214403, -0.895023)
+transform = Transform3D(0.999987, 0.000287811, 0, -0.000279439, 0.970906, 0.239419, 6.89087e-05, -0.239422, 0.970892, 0, 0.0214403, -0.895023)
 progress = 0.896284
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D7"]
@@ -630,7 +661,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D8" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999993, 0.000287812, 2.18275e-11, -0.000103397, 0.35925, 0.933223, 0.000268597, -0.933235, 0.359245, 0, -0.216652, -1.02276)
+transform = Transform3D(0.999991, 0.000287812, 2.18275e-11, -0.000103397, 0.35925, 0.933223, 0.000268597, -0.933235, 0.359245, 0, -0.216652, -1.02276)
 progress = 1.1737
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D8"]
@@ -639,7 +670,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D9" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999989, 0.000287844, -4.31497e-08, 0.000142112, -0.49358, 0.869682, 0.000250315, -0.869692, -0.493575, 0, -0.463782, -0.934329)
+transform = Transform3D(0.999987, 0.000287844, -4.31497e-08, 0.000142112, -0.49358, 0.869682, 0.000250315, -0.869692, -0.493575, 0, -0.463782, -0.934329)
 progress = 1.45067
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D9"]
@@ -648,7 +679,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D10" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999989, 0.000287939, 8.56075e-08, 0.000281945, -0.979247, 0.202646, 5.8434e-05, -0.202649, -0.979236, 0, -0.531547, -0.681421)
+transform = Transform3D(0.999987, 0.000287939, 8.56075e-08, 0.000281945, -0.979247, 0.202646, 5.8434e-05, -0.202649, -0.979236, 0, -0.531547, -0.681421)
 progress = 1.7122
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D10"]
@@ -657,7 +688,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D11" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.99999, 0.000287925, -8.73597e-08, 0.000287724, -0.999323, -0.0368007, -1.06835e-05, 0.0368024, -0.999279, 0, -0.556157, -0.363084)
+transform = Transform3D(0.999989, 0.000287925, -8.73597e-08, 0.000287724, -0.999323, -0.0368007, -1.06835e-05, 0.0368024, -0.999279, 0, -0.556157, -0.363084)
 progress = 2.04184
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D11"]
@@ -666,7 +697,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D12" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.99999, 0.000287919, 8.73579e-08, 0.000287724, -0.999323, -0.0367999, -1.05087e-05, 0.0368023, -0.999258, 0, -0.542875, -0.00492353)
+transform = Transform3D(0.999989, 0.000287919, 8.73579e-08, 0.000287724, -0.999323, -0.0367999, -1.05087e-05, 0.0368023, -0.999258, 0, -0.542875, -0.00492353)
 progress = 2.39372
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D12"]
@@ -675,7 +706,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D13" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999987, 0.00028781, 2.07022e-13, -0.000287802, 0.999959, -0.00734954, -2.11542e-06, 0.00734995, 0.999903, 0, 0.0536935, 0.647253)
+transform = Transform3D(0.999986, 0.000287809, 2.07022e-13, -0.000287802, 0.999958, -0.00734954, -2.11542e-06, 0.00734994, 0.999903, 0, 0.0536935, 0.647253)
 progress = 4.10572
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D13"]
@@ -693,7 +724,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D15" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999987, 0.00028781, -2.47693e-13, -0.000287802, 0.999961, -0.00734955, -2.11542e-06, 0.00734997, 0.999903, 0, 0.0554695, 0.405635)
+transform = Transform3D(0.999985, 0.00028781, -2.47693e-13, -0.000287802, 0.99996, -0.00734955, -2.11542e-06, 0.00734996, 0.999903, 0, 0.0554695, 0.405635)
 progress = 4.34665
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D15"]
@@ -702,7 +733,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D16" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999987, 0.00028781, 9.33435e-14, -0.000287802, 0.999961, -0.00734955, -2.11542e-06, 0.00734997, 0.999904, 0, 0.0572872, 0.158334)
+transform = Transform3D(0.999986, 0.00028781, 9.33435e-14, -0.000287802, 0.99996, -0.00734955, -2.11542e-06, 0.00734996, 0.999904, 0, 0.0572872, 0.158334)
 progress = 4.59328
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D16"]
@@ -720,11 +751,11 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="R_oruga" type="Path3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7, 0.00205176, -0.071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0.002, -0.071)
 curve = SubResource("Curve3D_06al2")
 
 [node name="PathFollow3D" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.99999, 0.000287912, -8.74128e-08, 0.000287915, -0.999949, 0.00561701, 1.52998e-06, -0.00561737, -0.999886, 0, -0.544182, 0.248555)
+transform = Transform3D(0.999988, 0.000287911, -8.74127e-08, 0.000287914, -0.999947, 0.00561701, 1.52998e-06, -0.00561736, -0.999884, 0, -0.544182, 0.248555)
 progress = 2.64753
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D"]
@@ -733,7 +764,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D2" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999989, 0.000287918, -8.74194e-08, 0.000287918, -0.999982, 0.00316823, 8.24803e-07, -0.0031683, -0.999962, 0, -0.545459, 0.509085)
+transform = Transform3D(0.999987, 0.000287918, -8.74194e-08, 0.000287917, -0.999981, 0.00316823, 8.24802e-07, -0.00316829, -0.999962, 0, -0.545459, 0.509085)
 progress = 2.90861
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D2"]
@@ -742,7 +773,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D3" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999985, 0.000287901, 8.51323e-08, 0.000280381, -0.973819, -0.227301, -6.53581e-05, 0.227305, -0.9738, 0, -0.494085, 0.822339)
+transform = Transform3D(0.999984, 0.000287901, 8.51323e-08, 0.000280381, -0.973818, -0.227301, -6.53581e-05, 0.227305, -0.9738, 0, -0.494085, 0.822339)
 progress = 3.22613
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D3"]
@@ -751,7 +782,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D4" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999987, 0.000288003, -3.04999e-08, 0.000100452, -0.34889, -0.93713, -0.000269914, 0.937161, -0.348878, 0, -0.279335, 1.00472)
+transform = Transform3D(0.999985, 0.000288003, -3.04999e-08, 0.000100452, -0.34889, -0.93713, -0.000269914, 0.937161, -0.348878, 0, -0.279335, 1.00472)
 progress = 3.53548
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D4"]
@@ -778,7 +809,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D7" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999989, 0.000287811, 0, -0.000279439, 0.970906, 0.239419, 6.89088e-05, -0.239422, 0.970892, 0, 0.0214403, -0.895023)
+transform = Transform3D(0.999987, 0.000287811, 0, -0.000279439, 0.970906, 0.239419, 6.89087e-05, -0.239422, 0.970892, 0, 0.0214403, -0.895023)
 progress = 0.896284
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D7"]
@@ -787,7 +818,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D8" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999993, 0.000287812, 2.18275e-11, -0.000103397, 0.35925, 0.933223, 0.000268597, -0.933235, 0.359245, 0, -0.216652, -1.02276)
+transform = Transform3D(0.999991, 0.000287812, 2.18275e-11, -0.000103397, 0.35925, 0.933223, 0.000268597, -0.933235, 0.359245, 0, -0.216652, -1.02276)
 progress = 1.1737
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D8"]
@@ -796,7 +827,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D9" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999989, 0.000287844, -4.31497e-08, 0.000142112, -0.49358, 0.869682, 0.000250315, -0.869692, -0.493575, 0, -0.463782, -0.934329)
+transform = Transform3D(0.999987, 0.000287844, -4.31497e-08, 0.000142112, -0.49358, 0.869682, 0.000250315, -0.869692, -0.493575, 0, -0.463782, -0.934329)
 progress = 1.45067
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D9"]
@@ -805,7 +836,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D10" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999989, 0.000287939, 8.56075e-08, 0.000281945, -0.979247, 0.202646, 5.8434e-05, -0.202649, -0.979236, 0, -0.531547, -0.681421)
+transform = Transform3D(0.999987, 0.000287939, 8.56075e-08, 0.000281945, -0.979247, 0.202646, 5.8434e-05, -0.202649, -0.979236, 0, -0.531547, -0.681421)
 progress = 1.7122
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D10"]
@@ -814,7 +845,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D11" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.99999, 0.000287925, -8.73597e-08, 0.000287724, -0.999323, -0.0368007, -1.06835e-05, 0.0368024, -0.999279, 0, -0.556157, -0.363084)
+transform = Transform3D(0.999989, 0.000287925, -8.73597e-08, 0.000287724, -0.999323, -0.0368007, -1.06835e-05, 0.0368024, -0.999279, 0, -0.556157, -0.363084)
 progress = 2.04184
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D11"]
@@ -823,7 +854,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D12" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.99999, 0.000287919, 8.73579e-08, 0.000287724, -0.999323, -0.0367999, -1.05087e-05, 0.0368023, -0.999258, 0, -0.542875, -0.00492353)
+transform = Transform3D(0.999989, 0.000287919, 8.73579e-08, 0.000287724, -0.999323, -0.0367999, -1.05087e-05, 0.0368023, -0.999258, 0, -0.542875, -0.00492353)
 progress = 2.39372
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D12"]
@@ -832,7 +863,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D13" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999987, 0.00028781, 2.07022e-13, -0.000287802, 0.999959, -0.00734954, -2.11542e-06, 0.00734995, 0.999903, 0, 0.0536935, 0.647253)
+transform = Transform3D(0.999986, 0.000287809, 2.07022e-13, -0.000287802, 0.999958, -0.00734954, -2.11542e-06, 0.00734994, 0.999903, 0, 0.0536935, 0.647253)
 progress = 4.10572
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D13"]
@@ -850,7 +881,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D15" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999987, 0.00028781, -2.47693e-13, -0.000287802, 0.999961, -0.00734955, -2.11542e-06, 0.00734997, 0.999903, 0, 0.0554695, 0.405635)
+transform = Transform3D(0.999985, 0.00028781, -2.47693e-13, -0.000287802, 0.99996, -0.00734955, -2.11542e-06, 0.00734996, 0.999903, 0, 0.0554695, 0.405635)
 progress = 4.34665
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D15"]
@@ -859,7 +890,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D16" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999987, 0.00028781, 9.33435e-14, -0.000287802, 0.999961, -0.00734955, -2.11542e-06, 0.00734997, 0.999904, 0, 0.0572872, 0.158334)
+transform = Transform3D(0.999986, 0.00028781, 9.33435e-14, -0.000287802, 0.99996, -0.00734955, -2.11542e-06, 0.00734996, 0.999904, 0, 0.0572872, 0.158334)
 progress = 4.59328
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D16"]

@@ -124,28 +124,91 @@ shape = SubResource("BoxShape3D_tt3rw")
 [node name="Ramp2" parent="ramps" instance=ExtResource("4_6m72w")]
 transform = Transform3D(-0.582194, 0, 0.81305, 0, 1, 0, -0.81305, 0, -0.582194, -4.25157, 0.314047, 8.43539)
 
-[node name="Ramp3" parent="ramps" instance=ExtResource("4_6m72w")]
-transform = Transform3D(0.634028, 0.509181, -0.582016, -0.144008, 0.817207, 0.558063, 0.759783, -0.270013, 0.591458, -7.69423, 1.39258, 10.8319)
-
 [node name="Tank1" parent="." instance=ExtResource("5_4ah5a")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8565, 1.38066, 3.23487)
-mass = 100.0
-ENGINE_POWER = 100
 
 [node name="TntBarrel" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98419, 0.993641, 9.53376)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.298125, 0.993641, 38.7517)
 
 [node name="TntBarrel2" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.98218, 0.974052, 10.6199)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.797547, 0.974052, 39.7595)
 
 [node name="TntBarrel3" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06876, 2.27091, 10.1043)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.523289, 2.27091, 39.2381)
 
 [node name="TntBarrel4" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.06876, 2.27091, 11.1094)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877167, 2.27091, 40.3417)
 
 [node name="TntBarrel5" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23839, 0.988598, 11.6816)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17847, 0.988598, 40.8658)
 
 [node name="TntBarrel6" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.07024, 3.46573, 10.6441)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63852, 3.46573, 39.7572)
+
+[node name="TntBarrel7" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.963298, 3.47784, 40.7957)
+
+[node name="TntBarrel8" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81745, 0.974052, 41.8749)
+
+[node name="TntBarrel9" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3569, 2.27091, 41.2605)
+
+[node name="TntBarrel10" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.885, 4.59488, 40.2154)
+
+[node name="TntBarrel11" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9519, 1.23336, 35.1245)
+
+[node name="TntBarrel12" parent="." instance=ExtResource("5_v5dby")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940155, 1.73201, 36.1063)
+
+[node name="pista" type="Node3D" parent="."]
+
+[node name="RigidBody3D" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.99958, 0.902667, 15.2617)
+
+[node name="RigidBody3D2" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.1357, 0.902667, 11.9404)
+
+[node name="RigidBody3D3" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.2923, 0.902667, 19.9278)
+
+[node name="RigidBody3D4" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.0587, 0.902667, 15.7672)
+
+[node name="RigidBody3D5" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.3533, 0.902667, 22.9442)
+
+[node name="RigidBody3D6" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.7147, 0.902667, 19.1149)
+
+[node name="RigidBody3D7" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.481, 0.902666, 25.3843)
+
+[node name="RigidBody3D8" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9268, 0.902666, 30.5083)
+
+[node name="RigidBody3D9" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.623, 0.902666, 27.2709)
+
+[node name="RigidBody3D10" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.0964, 0.902666, 35.2848)
+
+[node name="RigidBody3D11" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5177, 0.902666, 31.6261)
+
+[node name="RigidBody3D12" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7227, 0.902666, 39.3389)
+
+[node name="RigidBody3D13" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0379, 0.902666, 34.2857)
+
+[node name="RigidBody3D14" parent="pista" instance=ExtResource("3_onuaq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.75781, 0.902666, 42.7151)
+
+[node name="Ramp4" parent="pista" instance=ExtResource("4_6m72w")]
+transform = Transform3D(-0.338738, 0, -0.940881, 0, 1, 0, 0.940881, 0, -0.338738, -7.35258, 0.374511, 35.9745)
+
+[node name="Ramp5" parent="pista" instance=ExtResource("4_6m72w")]
+transform = Transform3D(-0.338738, 0, -0.940881, 0, 1, 0, 0.940881, 0, -0.338738, -8.28551, 0.374511, 38.5711)
