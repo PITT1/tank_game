@@ -1,35 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=16 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dbxsiyaaf1ro2" path="res://assets/textures/Grass004_1K-JPG_Color.jpg" id="3_qu0tt"]
 [ext_resource type="PackedScene" uid="uid://b3351clb8oakm" path="res://scenes/world/ramp_2.tscn" id="4_6m72w"]
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="5_4ah5a"]
 [ext_resource type="PackedScene" uid="uid://c8pg0kgtfn3cd" path="res://scenes/world/TNT_barrel.tscn" id="5_v5dby"]
+[ext_resource type="Texture2D" uid="uid://blsxwkeqs5xyv" path="res://assets/textures/box1_texture.jpg" id="6_t5ptc"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_1fp7r"]
-sky_top_color = Color(0.25336, 0.465043, 0.661042, 1)
-sky_curve = 0.117688
-sun_angle_max = 24.1
-sun_curve = 0.369344
-energy_multiplier = 0.5
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t5ptc"]
+sky_top_color = Color(0.218855, 0.608035, 0.927238, 1)
+sky_horizon_color = Color(0.5462, 0.661537, 0.652676, 1)
+sky_curve = 0.3
+sky_cover_modulate = Color(0.920995, 0.920995, 0.920995, 1)
+ground_horizon_color = Color(0.810579, 0.820632, 0.836421, 1)
 
-[sub_resource type="Sky" id="Sky_6m72w"]
-sky_material = SubResource("ProceduralSkyMaterial_1fp7r")
-radiance_size = 0
+[sub_resource type="Sky" id="Sky_bq33v"]
+sky_material = SubResource("ProceduralSkyMaterial_t5ptc")
 
-[sub_resource type="Environment" id="Environment_k8tpq"]
+[sub_resource type="Environment" id="Environment_j2gmx"]
 background_mode = 2
-background_color = Color(0.553753, 0.779293, 0.780848, 1)
-background_energy_multiplier = 2.75
-sky = SubResource("Sky_6m72w")
-sky_rotation = Vector3(0.0610865, 0, 0)
-reflected_light_source = 2
-glow_intensity = 2.35
-glow_bloom = 0.16
-glow_hdr_threshold = 0.7
-glow_hdr_scale = 1.2
-glow_hdr_luminance_cap = 12.35
-volumetric_fog_density = 0.0685
+sky = SubResource("Sky_bq33v")
+ambient_light_color = Color(0.878787, 0.896378, 0.897357, 1)
+tonemap_mode = 2
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdfg0"]
 albedo_texture = ExtResource("3_qu0tt")
@@ -39,16 +31,30 @@ uv1_scale = Vector3(200, 200, 200)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tt3rw"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bq33v"]
+albedo_texture = ExtResource("6_t5ptc")
+metallic = 0.46
+roughness = 0.73
+uv1_scale = Vector3(6.27, 6.27, 6.27)
+uv2_scale = Vector3(1.625, 1.625, 1.625)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j2gmx"]
+size = Vector3(20, 1, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1yooq"]
+size = Vector3(19.9326, 1, 10.0046)
+
 [node name="world" type="Node3D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_k8tpq")
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.949426, 0.293528, -0.111501, 0, 0.355107, 0.934826, 0.313992, 0.887547, -0.337148, 0, 0, 0)
+light_color = Color(0.873963, 0.910892, 0.725475, 1)
+light_energy = 0.4
+shadow_enabled = true
+directional_shadow_max_distance = 65.0
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="WorldEnvironment"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.0684, 0)
-light_energy = 2.21
-directional_shadow_max_distance = 92.0
-sky_mode = 1
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j2gmx")
 
 [node name="bloques" type="Node3D" parent="."]
 
@@ -128,40 +134,40 @@ transform = Transform3D(-0.582194, 0, 0.81305, 0, 1, 0, -0.81305, 0, -0.582194, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.8565, 1.38066, 3.23487)
 
 [node name="TntBarrel" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.298125, 0.993641, 38.7517)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.7374, 2.90203, 44.8215)
 
 [node name="TntBarrel2" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.797547, 0.974052, 39.7595)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.238, 2.96917, 45.8293)
 
 [node name="TntBarrel3" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.523289, 2.27091, 39.2381)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5122, 4.08986, 45.3079)
 
 [node name="TntBarrel4" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.877167, 2.27091, 40.3417)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1583, 4.11921, 46.4115)
 
 [node name="TntBarrel5" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17847, 0.988598, 40.8658)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.857, 2.90847, 46.9356)
 
 [node name="TntBarrel6" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.63852, 3.46573, 39.7572)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.397, 5.24957, 45.827)
 
 [node name="TntBarrel7" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.963298, 3.47784, 40.7957)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0722, 5.36934, 46.8655)
 
 [node name="TntBarrel8" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.81745, 0.974052, 41.8749)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.218, 2.99516, 47.9447)
 
 [node name="TntBarrel9" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.3569, 2.27091, 41.2605)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6786, 4.15393, 47.3303)
 
 [node name="TntBarrel10" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.885, 4.59488, 40.2154)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.1505, 6.39613, 46.2852)
 
 [node name="TntBarrel11" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9519, 1.23336, 35.1245)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.9519, 0.273184, 35.1245)
 
 [node name="TntBarrel12" parent="." instance=ExtResource("5_v5dby")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940155, 1.73201, 36.1063)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.940155, 0.3145, 36.1063)
 
 [node name="pista" type="Node3D" parent="."]
 
@@ -212,3 +218,17 @@ transform = Transform3D(-0.338738, 0, -0.940881, 0, 1, 0, 0.940881, 0, -0.338738
 
 [node name="Ramp5" parent="pista" instance=ExtResource("4_6m72w")]
 transform = Transform3D(-0.338738, 0, -0.940881, 0, 1, 0, 0.940881, 0, -0.338738, -8.28551, 0.374511, 38.5711)
+
+[node name="RigidBody3D15" type="StaticBody3D" parent="pista"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3009, 2.59577, 41.5589)
+collision_layer = 2
+collision_mask = 29
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="pista/RigidBody3D15"]
+transform = Transform3D(0.941335, 0, -0.337473, 0, 1, 0, 0.337473, 0, 0.941335, 6.96642, 0, 2.55149)
+material_override = SubResource("StandardMaterial3D_bq33v")
+mesh = SubResource("BoxMesh_j2gmx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pista/RigidBody3D15"]
+transform = Transform3D(0.941471, 0, -0.337095, 0, 1, 0, 0.337095, 0, 0.941471, 6.93805, 0, 2.52668)
+shape = SubResource("BoxShape3D_1yooq")

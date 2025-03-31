@@ -11,29 +11,36 @@
 [ext_resource type="Texture2D" uid="uid://dl0fciflr0f27" path="res://assets/textures/texture_terrain/Ground081_1K-JPG_NormalDX.jpg" id="9_5p7rt"]
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="10_nyfg8"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ggvvh"]
+sky_top_color = Color(0.306607, 0.58872, 0.82064, 1)
+sky_horizon_color = Color(0.725324, 0.788103, 0.837083, 1)
+ground_horizon_color = Color(0.725324, 0.788103, 0.837083, 1)
+
+[sub_resource type="Sky" id="Sky_3tjdj"]
+sky_material = SubResource("ProceduralSkyMaterial_ggvvh")
+
+[sub_resource type="Environment" id="Environment_kfait"]
+background_mode = 2
+sky = SubResource("Sky_3tjdj")
+tonemap_mode = 2
+
 [sub_resource type="Resource" id="Resource_oj4is"]
 script = ExtResource("3_2fjed")
 mode = 0
 textures = [[ExtResource("4_2ioar"), ExtResource("5_71q24"), ExtResource("6_1yftj")], [ExtResource("7_5home"), ExtResource("8_fniey"), ExtResource("9_5p7rt")]]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4jfv1"]
-sky_top_color = Color(0.971841, 0.977113, 0.9845, 1)
-sky_horizon_color = Color(1, 1, 1, 1)
-
-[sub_resource type="Sky" id="Sky_qx4ty"]
-sky_material = SubResource("ProceduralSkyMaterial_4jfv1")
-
-[sub_resource type="Environment" id="Environment_hdibm"]
-background_color = Color(0.553753, 0.779293, 0.780848, 1)
-sky = SubResource("Sky_qx4ty")
-ambient_light_source = 3
-ambient_light_color = Color(0.820366, 0.820366, 0.820366, 1)
-fog_light_color = Color(0.381767, 0.600452, 0.551682, 1)
-
 [node name="World2" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.526956, -0.505536, 0.683192, 0, 0.803857, 0.594823, -0.849893, 0.313445, -0.423597, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_kfait")
 
 [node name="HTerrain" type="Node3D" parent="."]
 script = ExtResource("1_cx41y")
+ambient_wind = 0.22
 centered = true
 _terrain_data = ExtResource("2_2cpoq")
 chunk_size = 32
@@ -52,8 +59,5 @@ shader_params/u_triplanar = null
 shader_params/u_tile_reduction = Vector4(1, 1, 1, 1)
 
 [node name="Tank1" parent="." instance=ExtResource("10_nyfg8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73802, 5.55586, 14.6256)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.73802, 2.89606, 14.6256)
 ENGINE_POWER = 400
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_hdibm")
