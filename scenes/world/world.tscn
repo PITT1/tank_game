@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://d18hrxh6ro6uo"]
+[gd_scene load_steps=17 format=3 uid="uid://d18hrxh6ro6uo"]
 
 [ext_resource type="PackedScene" uid="uid://scrd3bw2vue7" path="res://scenes/world/block_1.tscn" id="3_onuaq"]
 [ext_resource type="Texture2D" uid="uid://dbxsiyaaf1ro2" path="res://assets/textures/Grass004_1K-JPG_Color.jpg" id="3_qu0tt"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://8xws7jnxlp2q" path="res://scenes/player/tank1.tscn" id="5_4ah5a"]
 [ext_resource type="PackedScene" uid="uid://c8pg0kgtfn3cd" path="res://scenes/world/TNT_barrel.tscn" id="5_v5dby"]
 [ext_resource type="Texture2D" uid="uid://blsxwkeqs5xyv" path="res://assets/textures/box1_texture.jpg" id="6_t5ptc"]
+[ext_resource type="PackedScene" uid="uid://b2fmgydqlyjac" path="res://scenes/enemies/turrent.tscn" id="7_bq33v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_t5ptc"]
 sky_top_color = Color(0.218855, 0.608035, 0.927238, 1)
@@ -232,3 +233,6 @@ mesh = SubResource("BoxMesh_j2gmx")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="pista/RigidBody3D15"]
 transform = Transform3D(0.941471, 0, -0.337095, 0, 1, 0, 0.337095, 0, 0.941471, 6.93805, 0, 2.52668)
 shape = SubResource("BoxShape3D_1yooq")
+
+[node name="Turrent" parent="." instance=ExtResource("7_bq33v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.02167, 0.317088, 20.8125)

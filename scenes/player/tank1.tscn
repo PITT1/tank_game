@@ -404,7 +404,7 @@ metallic_specular = 0.88
 roughness = 0.77
 
 [node name="Tank1" type="VehicleBody3D"]
-collision_mask = 15
+collision_mask = 63
 mass = 100.0
 script = ExtResource("1_15ygh")
 STEER_POWER = 300
@@ -617,7 +617,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D3" type="PathFollow3D" parent="L_oruga"]
-transform = Transform3D(0.999866, -2.54058e-05, -8.5997e-08, -2.50066e-05, -0.983666, -0.179595, 4.4781e-06, 0.17959, -0.983691, 0, -0.525984, 0.805869)
+transform = Transform3D(0.999866, -2.54058e-05, -8.5997e-08, -2.50066e-05, -0.983666, -0.179595, 4.4781e-06, 0.17959, -0.98369, 0, -0.525984, 0.805869)
 progress = 3.22613
 
 [node name="TankTrack" type="MeshInstance3D" parent="L_oruga/PathFollow3D3"]
@@ -774,7 +774,7 @@ material_override = SubResource("StandardMaterial3D_hjqk5")
 mesh = ExtResource("7_hjqk5")
 
 [node name="PathFollow3D3" type="PathFollow3D" parent="R_oruga"]
-transform = Transform3D(0.999866, -2.54058e-05, -8.5997e-08, -2.50066e-05, -0.983666, -0.179595, 4.4781e-06, 0.17959, -0.983691, 0, -0.525984, 0.805869)
+transform = Transform3D(0.999866, -2.54058e-05, -8.5997e-08, -2.50066e-05, -0.983666, -0.179595, 4.4781e-06, 0.17959, -0.98369, 0, -0.525984, 0.805869)
 progress = 3.22613
 
 [node name="TankTrack" type="MeshInstance3D" parent="R_oruga/PathFollow3D3"]
